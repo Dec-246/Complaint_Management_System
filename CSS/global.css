@@ -1,25 +1,49 @@
 .example {
   padding: 20px;
   color: white;
+  border: 2px solid black;
 }
 /* Controlls background image once user logged in */
 .body{
     background-image:url("IMG/backgroundImage.png");
+    opacity: 0.5;
     font-family: Arial;
     /* margin: horizontal centering */
     margin: 0;
 }
 
+
 /* header/ logo/ title */
 .header {
     padding: 10px;
+    margin: 30px;
     text-align: center;
     background: white;
+    
     color: black;
     font-size: 30px;
     /* sizing of corners */
     border-radius: 20px;
     border-color: black;
+    border: 2px solid black;
+
+}
+
+div.header {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid black;
+}
+
+div.header p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
+
+div.header h1 {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
 }
 
 /* Extra small devices (phones, 600px and down) */
