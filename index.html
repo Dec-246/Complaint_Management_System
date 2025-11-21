@@ -3,23 +3,23 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- mobile phones -->
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="CSS/global.css"> 
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="CSS/mobile.css"> 
 
     <!-- tablets/ large phones -->
-<link rel="stylesheet" media="screen and (min-width: 600px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 600px)" href="CSS/mobile.css">
 
     <!-- landscape tablets -->
 <link rel="stylesheet" media="screen and (min-width: 768px)" href="CSS/global.css">
     
 <!-- laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 992px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 992px)" href="CSS/desktop.css">
 
 <!-- large laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 1200px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 1200px)" href="CSS/desktop.css">
 
 <title>Home Screen</title>
-
 </head>
+
 <body>
 <style>
     body{
@@ -30,11 +30,24 @@
 <div class="header">
     <h1>NatBest</h1>
     <p>Everyday beautiful life</p>
-</div>
-<h1>Welcome back {user}</h1>
 
-<h2>Typical Media Query Breakpoints</h2>
+    <h2>Welcome back {user}</h2>
+</div>
+
+
+
 <p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>
+
+<div class="userDashboardButtons">
+    <button class="logComplaint" onclick="alert('You can log any complaint here...')">Log complaint</button>
+
+<button class="supportPersonsInfo" onclick="alert('You can view the contact info to your support person here...')">View Supports info</button>
+
+<button class="complaintStatus" onclick="alert('You can view the status of your complaint/s here...')">View Complaint Status</button>
+</div>
+
+
+
 
 
 </body>
