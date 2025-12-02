@@ -1,3 +1,11 @@
+/* ***Menu*** */
+.menu{
+  display: flex;
+  flex-direction: row;
+  background-color: #dee1e6;
+  padding: 10px;
+  margin: auto;
+}
 /* ***Login page*** */
 * {
   box-sizing: border-box;
@@ -207,9 +215,10 @@ h1,h2, h3, h4, h5, h6 {
   margin: 10px;
   text-align: center;
   background: white;
-  
-  color: black;
-  font-size: 30px;
+  margin-left: 30%;
+  margin-right: 30%;
+  color: blue;
+  font-size: 16px;
   /* sizing of corners */
   border-radius: 1rem;
   border-color: black;

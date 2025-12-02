@@ -33,7 +33,7 @@ $stmt->close();
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- mobile phones -->
+
 <link rel="stylesheet"  href="CSS/global.css"> 
 
 
@@ -41,6 +41,7 @@ $stmt->close();
 </head>
 
 <body>
+    <?php include 'Includes/navbar.php';?>
 <style>
     body{
         background-image:url("IMG/backgroundImage.png");
@@ -55,17 +56,17 @@ $stmt->close();
 <div class="profileData">
 
     <div class="profInfo">
-    <strong>Username</strong>
+    <strong>Username:</strong><br>
     <?= htmlspecialchars($_SESSION['account_name'])?>
     </div>
 
     <div class="profInfo">
-    <strong>Email</strong>
+    <strong>Email:</strong><Br>
     <?= htmlspecialchars($email)?>
     </div>
 
     <div class="profInfo">
-    <strong>Registered</strong>
+    <strong>Registered:</strong><br>
     <?= htmlspecialchars($registered)?>
     </div>
 

@@ -20,6 +20,7 @@ if (!isset($_SESSION['account_loggedin'])) {
 </head>
 
 <body>
+    <?php include 'Includes/navbar.php';?>
 <style>
     body{
         background-image:url("IMG/backgroundImage.png");
@@ -50,10 +51,6 @@ if (!isset($_SESSION['account_loggedin'])) {
 
     <div style="flex-grow: 1;">
         <br><button class="complaintStatus" onclick="alert('You can view the status of your complaint/s here...')">View Complaint Status</button>
-    </div>
-
-    <div style="flex-grow: 1;">
-        <br><a href="profile.php">Profile</a>
     </div>
 </div>
 
