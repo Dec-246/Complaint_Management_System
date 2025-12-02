@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+// If user not logged in, redirect to login page
+if (!isset($_SESSION['account_loggedin'])) {
+    header('Location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +30,7 @@
     <h1>NatBest</h1>
     <p>Everyday beautiful life</p>
 
-    <h2>Welcome back staff member #{user}</h2>
+    <h2>Welcome back <?= htmlspecialchars($_SESSION['account_name'], ENT_QUOTES) ?></h2>
 </div>
 
 <p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>
@@ -40,6 +50,10 @@
 
     <div style="flex-grow: 1;">
         <br><button class="complaintStatus" onclick="alert('You can view the status of your complaint/s here...')">View Complaint Status</button>
+    </div>
+
+    <div style="flex-grow: 1;">
+        <br><a href="profile.php">Profile</a>
     </div>
 </div>
 

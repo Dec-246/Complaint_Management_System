@@ -1,0 +1,72 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['account_loggedin'])) {
+    header('Location: index.php');
+    exit;
+}
+
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'ComplaintManagementSystem';
+$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+
+
+if (mysqli_connect_errno()) {
+    exit('Failed to connect!');
+}
+
+//  don't have email or registered info stored in sessions so instead get results from database
+$stmt = $con->prepare('SELECT email, registered FROM accounts WHERE id = ?');
+
+// using account ID to get account info
+$stmt->bind_param('i', $_SESSION['account_id']);
+$stmt->execute();
+$stmt->bind_result($email, $registered);
+$stmt->fetch();
+$stmt->close();
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- mobile phones -->
+<link rel="stylesheet"  href="CSS/global.css"> 
+
+
+<title>Home Screen</title>
+</head>
+
+<body>
+<style>
+    body{
+        background-image:url("IMG/backgroundImage.png");
+    }
+</style>
+
+<div class="header">
+    <h1>NatBest</h1>
+    <p>Everyday beautiful life</p>
+</div>
+
+<div class="profileData">
+
+    <div class="profInfo">
+    <strong>Username</strong>
+    <?= htmlspecialchars($_SESSION['account_name'])?>
+    </div>
+
+    <div class="profInfo">
+    <strong>Email</strong>
+    <?= htmlspecialchars($email)?>
+    </div>
+
+    <div class="profInfo">
+    <strong>Registered</strong>
+    <?= htmlspecialchars($registered)?>
+    </div>
+
+</div>
