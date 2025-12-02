@@ -6,6 +6,27 @@ if (!isset($_SESSION['account_loggedin'])) {
     header('Location: login.php');
     exit;
 }
+
+// Want to restrict non-activated users to staff home page...
+// Get account username (can be either email or id instead)
+$stmt = $con->prepare('SELECT activation_code FROM accounts WHERE username = ?');
+$stmt->bind_param('s', $_POST['username']);
+$stmt->execute();
+$stmt->bind_result($activation_code);
+$stmt->fetch();
+$stmt->close();
+// Check if account activated
+if ($activation_code == 'activated') {
+	// account is activated
+	// Display home page etc
+
+    header('Location: index.php');
+    exit;
+} else {
+	// account is not activated
+	// redirect user or display an error
+    header('Location: login.php');
+}
 ?>
 
 <!DOCTYPE html>
