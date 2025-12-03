@@ -1,12 +1,5 @@
 <?php
-session_start();
-
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'ComplaintManagementSystem';
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-
+require 'Includes/db.connect.php';
 
 // check if the email and code exists...
 if (isset($_GET['email'], $_GET['code']) && !empty($_GET['email']) && !empty($_GET['code'])) {
@@ -26,7 +19,7 @@ if (isset($_GET['email'], $_GET['code']) && !empty($_GET['email']) && !empty($_G
 				$stmt->bind_param('sss', $newcode, $_GET['email'], $_GET['code']);
 				$stmt->execute();
 				// Output success message
-				echo '<div class="activationMessage">Your account is now activated! You can now <a href="login.php">login</a>! </div';
+				echo 'Your account is now activated! You can now <a href="login.php">login</a>!';
 			}
 		} else {
 			echo 'The account is already activated or doesn\'t exist!';

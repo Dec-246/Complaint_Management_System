@@ -1,21 +1,8 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['account_loggedIn'])) {
-    header('Location: index.php');
-    exit;
-}
-
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'ComplaintManagementSystem';
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+require 'Includes/db.connect.php';
+require 'authoriseUser.php';
 
 
-if (mysqli_connect_errno()) {
-    exit('Failed to connect!');
-}
 
 //  don't have email or registered info stored in sessions so instead get results from database
 $stmt = $con->prepare('SELECT email, registered FROM accounts WHERE id = ?');

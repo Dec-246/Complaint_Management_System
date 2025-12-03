@@ -1,10 +1,11 @@
 <?php 
-session_start();
+ini_set('display_errors', 0);
+require 'Includes/db.connect.php';
 
 //redirect user to home page if user logged in
 if (isset($_SESSION['account_loggedIn'])) {
     //setting redirectory to staff home page
-    header('Location: staffHome.php');
+header("Location: staffHome.php");
     exit;
 }
 ?>
@@ -24,6 +25,19 @@ if (isset($_SESSION['account_loggedIn'])) {
     
             <form action="registerProcess.php" method="post" class="form login-form">
             
+            <?php
+            if ($_SESSION['existError'] == 1){
+                echo '<div class="checkEmail">';
+                echo 'Username already exists! Please choose another! ';
+                echo '</div>';
+            }
+            if ($_SESSION['emailValidation'] == 2){
+                echo '<div class="checkEmail">';
+                echo 'Email is not valid! Please try again!! ';
+                echo '</div>';
+            }
+            ?>
+
             <h1>Staff Register</h1>
 
             <label class="form-label" for="username">Username</label>

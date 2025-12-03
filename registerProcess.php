@@ -1,31 +1,24 @@
 <?php
-
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'ComplaintManagementSystem';
-
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-
-if (mysqli_connect_errno()) {
-// connection error message
-	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
+require 'Includes/db.connect.php';
 
 // check if the form has been submitted
 if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 	exit('Please complete the registration form!');
 }
-// Ensure registration values not null
-if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
-	exit('Please complete the registration form');
-}
+
 
 // --------------------------------------------
 // -------- VALIDATION -----------------
 // Validation for email
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-	exit('Email is not valid! Please try again!');
+	// exit('Email is not valid! Please try again!');
+
+
+    //method is referred to in register.php
+    // setting error message as a session 
+    $_SESSION['emailValidation'] =2;
+    //redirecting user to register as reg has failed
+    header("Location: register.php");
 }
 // ValidatION for username (must be alphanumeric)
 if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['username']) == 0) {
@@ -46,8 +39,15 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	$stmt->store_result();
 
 	if ($stmt->num_rows > 0) {
-		echo 'Username already exists! Please choose another!';
-	} else {
+        //existing account error
+    $_SESSION['existError'] =1;
+
+    //print_r($_SESSION);
+header("Location: register.php");
+exit;
+//  echo 'Username already exists! Please choose another! ';
+
+} else {
 
         // Declare variables
         $registered = date('Y-m-d H:i:s');
@@ -83,7 +83,15 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             // Send mail
             mail($_POST['email'], $subject, $message, $headers);
             // Output message
-            echo 'Please check your email to activate your account!';
+            // echo 'Please check your email to activate your account!';
+
+            //If first session (login attempt) failed
+            if (isset($_SESSION['existError'])) {
+                // clearing up the session when not in use
+            unset($_SESSION['existError']);
+        }
+        // successful redirect 
+            header("Location: login.php");
         } else {
         	echo 'Could not prepare statement!';
         }
@@ -95,4 +103,6 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 }
 // Closing connection here
 $con->close();
+
+// header("Location: registerConfirm.php");
 ?>

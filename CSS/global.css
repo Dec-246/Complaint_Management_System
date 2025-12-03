@@ -23,6 +23,22 @@
   margin: 100px auto;
   padding: 35px;
 }
+.checkEmail{
+  margin: auto;
+  text-align: center;
+  margin-left: 40%;
+
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-top: 50px;
+  width: 400px;
+  max-width: 95%;
+  background-color: #dee1e6;
+  box-shadow: 0px 0px 20px 20px rgba(45, 57, 68, 0.05);
+  margin: 100px auto;
+  padding: 35px;
+}
 
 /* *** Login/ Register *** */
 * {

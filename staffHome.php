@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+// including session and db connection in own file
 require_once 'Includes/db.connect.php';
 
 

@@ -1,18 +1,6 @@
 <?php
 
-session_start();
-
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'ComplaintManagementSystem';
-
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-// Checking connection errors
-if (mysqli_connect_errno()) {
-    // If error with connection, stop script, display error
-    exit('Failed to connect :(');
-}
+require 'Includes/db.connect.php';
 
 // check data from login form was submitted, isset() will check if data exists
 if (!isset($_POST['username'], $_POST['password'])) {

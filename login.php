@@ -3,7 +3,7 @@
 
 <?php 
 //Using sessions so need to initialise
-session_start();
+require 'Includes/db.connect.php';
 
 //redirect user to home page if user logged in
 if (isset($_SESSION['account_loggedIn'])) {
