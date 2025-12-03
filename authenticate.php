@@ -41,7 +41,7 @@ if ($stmt->num_rows > 0) {
         // Regenerate session ID to prevent session fixation attacks | prevents session hijacking (regenerates user's session ID stored on server and as cookie in browser.)
         session_regenerate_id();
         // Declare session variables (they basically act like cookies but the data is remembered on the server)
-        $_SESSION['account_loggedin'] = TRUE;
+        $_SESSION['account_loggedIn'] = TRUE;
         $_SESSION['account_name'] = $_POST['username'];
         $_SESSION['account_id'] = $id;
         // Output success message

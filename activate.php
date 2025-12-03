@@ -1,6 +1,6 @@
 <?php
 session_start();
-// Change the below variables to reflect your MySQL database details
+
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';

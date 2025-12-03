@@ -76,7 +76,8 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             //  headers
             $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
             // Update the activation variable below
-            $activate_link = 'https://example.com/ComplaintManagementSystem/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
+            $activate_link = 'http://localhost/ComplaintManagementSystem/activate.php?email=' . urlencode($_POST['email']) . '&code=' . urlencode($uniqid);
+
             // Email message
             $message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
             // Send mail

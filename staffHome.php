@@ -1,32 +1,31 @@
 <?php
-
 session_start();
+
+require_once 'Includes/db.connect.php';
+
+
 // If user not logged in, redirect to login page
-if (!isset($_SESSION['account_loggedin'])) {
+if (!isset($_SESSION['account_loggedIn'])) {
     header('Location: login.php');
     exit;
 }
 
+$username = $_SESSION['account_name'];
+
 // Want to restrict non-activated users to staff home page...
 // Get account username (can be either email or id instead)
 $stmt = $con->prepare('SELECT activation_code FROM accounts WHERE username = ?');
-$stmt->bind_param('s', $_POST['username']);
+$stmt->bind_param('s', $username);
 $stmt->execute();
 $stmt->bind_result($activation_code);
 $stmt->fetch();
 $stmt->close();
 // Check if account activated
-if ($activation_code == 'activated') {
-	// account is activated
-	// Display home page etc
-
-    header('Location: index.php');
-    exit;
-} else {
-	// account is not activated
-	// redirect user or display an error
+if ($activation_code !== 'activated') {
+	// account not activated, redirect to login
     header('Location: login.php');
-}
+    exit;
+} 
 ?>
 
 <!DOCTYPE html>
