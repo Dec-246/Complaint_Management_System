@@ -36,6 +36,16 @@ header("Location: staffHome.php");
                 echo 'Email is not valid! Please try again!! ';
                 echo '</div>';
             }
+            if ($_SESSION['usernameValidation'] == 3){
+                echo '<div class="checkEmail">';
+                echo 'Username is not valid! ';
+                echo '</div>';
+            }
+            if ($_SESSION['passwordValidation'] == 4){
+                echo '<div class="checkEmail">';
+                echo 'Password must be between 5 and 20 characters long! ';
+                echo '</div>';
+            }
             ?>
 
             <h1>Staff Register</h1>
