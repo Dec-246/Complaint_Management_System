@@ -5,6 +5,7 @@
 //Using sessions so need to initialise
 require 'Includes/db.connect.php';
 
+
 //redirect user to home page if user logged in
 if (isset($_SESSION['account_loggedIn'])) {
     //setting redirectory to staff home page
@@ -21,11 +22,10 @@ if (isset($_SESSION['account_loggedIn'])) {
         <link href="CSS/global.css" rel="stylesheet" type="text/css">
         <title>Login</title>
     </head>
+    
     <body>
         <div class="login"></div>
 
-            
-    
             <form action="authenticate.php" method="post" class="form login-form">
             
             <h1>Staff Login</h1>
@@ -42,13 +42,11 @@ if (isset($_SESSION['account_loggedIn'])) {
                 <input class="form-input" type="password" name="password" placeholder="Password" id="password" required>
             </div>
             
-                
             <button class="btn blue" type="submit">Login</button>
                 
             <p class="register-link">Don't have an account? <a href="register.php" class="form-link">Register</a></p>
                 
             </form>
-
         </div>
     </body>
 </html>

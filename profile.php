@@ -1,6 +1,6 @@
 <?php
 require 'Includes/db.connect.php';
-require 'authoriseUser.php';
+require 'Includes/authoriseUser.php';
 
 
 
@@ -44,7 +44,7 @@ $stmt->close();
 
     <div class="profInfo">
     <strong>Username:</strong><br>
-    <?= htmlspecialchars($_SESSION['account_name'])?>
+    <?= htmlspecialchars($_SESSION['username'])?>
     </div>
 
     <div class="profInfo">

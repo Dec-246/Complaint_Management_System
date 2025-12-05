@@ -6,10 +6,11 @@ require_once 'Includes/db.connect.php';
 // If user not logged in, redirect to login page
 if (!isset($_SESSION['account_loggedIn'])) {
     header('Location: login.php');
+    //echo 'user not logged in, redirecting to login page';
     exit;
 }
 
-$username = $_SESSION['account_name'];
+$username = $_SESSION['username'];
 
 // Want to restrict non-activated users to staff home page...
 // Get account username (can be either email or id instead)
@@ -19,10 +20,16 @@ $stmt->execute();
 $stmt->bind_result($activation_code);
 $stmt->fetch();
 $stmt->close();
+
+// var_dump($username);
+// var_dump($activation_code);
+// exit;
+
 // Check if account activated
 if ($activation_code !== 'activated') {
 	// account not activated, redirect to login
-    header('Location: login.php');
+    header('Location: accountInactive.php');
+    echo 'not activated';
     exit;
 } 
 ?>
@@ -50,7 +57,7 @@ if ($activation_code !== 'activated') {
     <h1>NatBest</h1>
     <p>Everyday beautiful life</p>
 
-    <h2>Welcome back <?= htmlspecialchars($_SESSION['account_name'], ENT_QUOTES) ?></h2>
+    <h2>Welcome back <?= htmlspecialchars($_SESSION['username'], ENT_QUOTES) ?></h2>
 </div>
 
 <p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>

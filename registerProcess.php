@@ -8,6 +8,7 @@ if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 
 
 // --------------------------------------------
+// For the validation, I have created a switch case in the register.php file which refers to the error codes below 
 // -------- VALIDATION -----------------
 // Validation for email
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -98,7 +99,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
                 unset($_SESSION['existError']);
             }
             // successful redirect 
-            header("Location: login.php");
+            header("Location: accountInactive.php");
         } else {
             echo 'Could not prepare statement!';
         }
