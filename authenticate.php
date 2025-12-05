@@ -21,7 +21,8 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM accounts WH
     }
 
     if ($stmt->num_rows === 0) {
-        die("No user found");
+        header ('Location: Includes/wrongCreds.php');
+        exit;
     }
     
     // Check account exists with input username
@@ -51,11 +52,14 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM accounts WH
             exit;
         } else {
             // Incorrect password
-            echo 'Incorrect password!';
+
+            header ('Location: Includes/wrongCreds.php');
+        
         }
     } else {
         // Incorrect username
-        echo 'Incorrect username and/or password!';
+        header ('Location: Includes/wrongCreds.php');
+        exit;
     }
 
 
