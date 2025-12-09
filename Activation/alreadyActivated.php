@@ -38,7 +38,7 @@ require '../Includes/db.connect.php';
 if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
     echo "<div class='checkEmail'>";
     echo 'The account is already activated or doesn\'t exist!';
-    echo '<a href="login.php">login</a> here or <a href="login.php">register</a> here!';
+    echo '<a href="../login.php">login</a> here or <a href="../register.php">register</a> here!';
     echo "</div>";
 }
 ?>

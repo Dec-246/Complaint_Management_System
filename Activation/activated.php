@@ -38,7 +38,7 @@ require '../Includes/db.connect.php';
 // Ensure registration values not null
 if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
     echo "<div class='checkEmail'>";
-    echo 'Your account is now activated! You can now <a href="login.php">login</a>!';
+    echo 'Your account is now activated! You can now <a href="../login.php">login</a>!';
     echo "</div>";
 }
 ?>
