@@ -22,7 +22,7 @@ require '../Includes/db.connect.php';
 <!-- large laptops/ desktops -->
 <link rel="stylesheet" media="screen and (min-width: 1200px)" href="CSS/global.css">
 
-<title>Home Screen</title>
+<title>Activated</title>
 </head>
 
 <body>
