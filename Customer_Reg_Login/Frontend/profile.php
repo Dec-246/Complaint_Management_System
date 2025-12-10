@@ -5,7 +5,7 @@ require 'Includes/authoriseUser.php';
 
 
 //  don't have email or registered info stored in sessions so instead get results from database
-$stmt = $con->prepare('SELECT email, registered FROM accounts WHERE id = ?');
+$stmt = $con->prepare('SELECT email, registered FROM customer_accounts WHERE id = ?');
 
 // using account ID to get account info
 $stmt->bind_param('i', $_SESSION['account_id']);

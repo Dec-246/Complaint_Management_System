@@ -18,14 +18,14 @@ if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     // setting error message as a session 
     $_SESSION['emailValidation'] = 2;
     //redirecting user to register as reg has failed
-    header("Location: register.php");
+    header("Location: ../Customer_Reg_Login/Frontend/register.php");
 }
 
 // ValidatION for username (must be alphanumeric)
 if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['username']) == 0) {
 
     $_SESSION['usernameValidation'] = 3;
-    header("Location: register.php");
+    header("Location: ../Customer_Reg_Login/Frontend/register.php");
     //exit('Username is not valid!');
 }
 
@@ -33,13 +33,13 @@ if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['username']) == 0) {
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
 
     $_SESSION['passwordValidation'] = 4;
-    header("Location: register.php");
+    header("Location: ../Customer_Reg_Login/Frontend/register.php");
     //exit('Password must be between 5 and 20 characters long!');
 }
 
 
 // Check if given username already in database
-if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT id, password FROM customer_accounts WHERE username = ?')) {
     // Bind parameters - data type to text field
     $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
@@ -51,7 +51,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
         $_SESSION['existError'] = 1;
 
         //print_r($_SESSION);
-        header("Location: register.php");
+        header("Location: ../Customer_Reg_Login/Frontend/register.php");
         exit;
         //  echo 'Username already exists! Please choose another! ';
 
@@ -64,7 +64,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 
 
         // Username does not exist, insert new account
-        if ($stmt = $con->prepare('INSERT INTO accounts (username, password, email, registered, activation_code) VALUES (?, ?, ?, ?, ?)')) {
+        if ($stmt = $con->prepare('INSERT INTO customer_accounts (username, password, email, registered, activation_code) VALUES (?, ?, ?, ?, ?)')) {
 
 
             // Creating unique activation code- unique ID sent to users email address
@@ -99,7 +99,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
                 unset($_SESSION['existError']);
             }
             // successful redirect 
-            header("Location: accountInactive.php");
+            header("Location: ../Customer_Reg_Login/Frontend/accountInactive.php");
         } else {
             echo 'Could not prepare statement!';
         }

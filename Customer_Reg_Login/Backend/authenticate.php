@@ -9,7 +9,7 @@ if (!isset($_POST['username'], $_POST['password'])) {
 }
 
 // Prepare SQL, prevent SQL injection
-if ($stmt = $con->prepare('SELECT id, password, activation_code FROM accounts WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT id, password, activation_code FROM customer_accounts WHERE username = ?')) {
 
     $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
@@ -21,7 +21,7 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM accounts WH
     }
 
     if ($stmt->num_rows === 0) {
-        header ('Location: Includes/wrongCreds.php');
+        header ('Location: ../Includes/wrongCreds.php');
         exit;
     }
     
@@ -33,7 +33,7 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM accounts WH
 
         // ***************************************************
         if ($activation_code !== 'activated') {
-            header('Location: accountInactive.php');
+            header('Location: ../Customer_Reg_Login/Frontend/accountInactive.php');
             exit;
         }
 
@@ -48,17 +48,17 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM accounts WH
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['account_id'] = $id;
             // Output success message
-            header('Location: staffHome.php');
+            header('Location: ../index.php');
             exit;
         } else {
             // Incorrect password
 
-            header ('Location: Includes/wrongCreds.php');
+            header ('Location: ../Includes/wrongCreds.php');
         
         }
     } else {
         // Incorrect username
-        header ('Location: Includes/wrongCreds.php');
+        header ('Location: ../Includes/wrongCreds.php');
         exit;
     }
 

@@ -1,5 +1,5 @@
 <?php
-require '../Includes/db.connect.php';
+require 'Includes/db.connect.php';
 
 ?>
 
