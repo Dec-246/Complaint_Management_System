@@ -1,6 +1,6 @@
 <?php
-require 'Includes/db.connect.php';
-require 'Includes/authoriseUser.php';
+require '../../Includes/db.connect.php';
+require '../Backend/authoriseUser.php';
 
 
 
@@ -21,14 +21,14 @@ $stmt->close();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet"  href="CSS/global.css"> 
+<link rel="stylesheet"  href="../../CSS/global.css"> 
 
 
 <title>Home Screen</title>
 </head>
 
 <body>
-    <?php include 'Includes/navbar.php';?>
+    <?php include '../Includes/navbar.php';?>
 <style>
     body{
         background-image:url("IMG/backgroundImage.png");

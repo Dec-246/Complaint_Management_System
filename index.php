@@ -1,29 +1,54 @@
+<?php
+// including session and db connection in own file
+require 'Includes/db.connect.php';
+
+
+// If user not logged in, redirect to login page
+if (!isset($_SESSION['account_loggedIn'])) {
+    header('Location: Customer_Reg_Login/Frontend/login.php');
+    //echo 'user not logged in, redirecting to login page';
+    exit;
+}
+
+$username = $_SESSION['username'];
+
+// Want to restrict non-activated users to staff home page...
+// Get account username (can be either email or id instead)
+$stmt = $con->prepare('SELECT activation_code FROM customer_accounts WHERE username = ?');
+$stmt->bind_param('s', $username);
+$stmt->execute();
+$stmt->bind_result($activation_code);
+$stmt->fetch();
+$stmt->close();
+
+// var_dump($username);
+// var_dump($activation_code);
+// exit;
+
+// Check if account activated
+if ($activation_code !== 'activated') {
+	// account not activated, redirect to login
+    header('Location: Customer_Reg_Login/Frontend/accountInactive.php');
+    echo 'not activated';
+    exit;
+} 
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- mobile phones -->
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="CSS/global.css"> 
+<link rel="stylesheet"  href="CSS/global.css"> 
 
-    <!-- tablets/ large phones -->
-<link rel="stylesheet" media="screen and (min-width: 600px)" href="CSS/global.css">
-
-    <!-- landscape tablets -->
-<link rel="stylesheet" media="screen and (min-width: 768px)" href="CSS/global.css">
-    
-<!-- laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 992px)" href="CSS/global.css">
-
-<!-- large laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 1200px)" href="CSS/global.css">
 
 <title>Home Screen</title>
 </head>
 
 <body>
+    <?php include 'Includes/Customer_nav.php';?>
 <style>
     body{
-        /* add to body in css file. remove from main html */
         background-image:url("IMG/backgroundImage.png");
     }
 </style>
@@ -32,7 +57,7 @@
     <h1>NatBest</h1>
     <p>Everyday beautiful life</p>
 
-    <h2>Welcome back {user}</h2>
+    <h2>Welcome back <?= htmlspecialchars($_SESSION['username'], ENT_QUOTES) ?></h2>
 </div>
 
 <p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>

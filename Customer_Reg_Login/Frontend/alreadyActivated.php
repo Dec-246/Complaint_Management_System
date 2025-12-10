@@ -1,5 +1,5 @@
 <?php
-require '../Includes/db.connect.php';
+require '../../Includes/db.connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -7,19 +7,19 @@ require '../Includes/db.connect.php';
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- mobile phones -->
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="CSS/global.css"> 
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="../../CSS/global.css"> 
 
     <!-- tablets/ large phones -->
-<link rel="stylesheet" media="screen and (min-width: 600px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 600px)" href="../../CSS/global.css">
 
     <!-- landscape tablets -->
-<link rel="stylesheet" media="screen and (min-width: 768px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 768px)" href="../../CSS/global.css">
     
 <!-- laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 992px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 992px)" href="../../CSS/global.css">
 
 <!-- large laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 1200px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 1200px)" href="../../SS/global.css">
 
 <title>Activated account</title>
 </head>
@@ -38,7 +38,7 @@ require '../Includes/db.connect.php';
 if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
     echo "<div class='checkEmail'>";
     echo 'The account is already activated or doesn\'t exist!';
-    echo '<a href="../login.php">login</a> here or <a href="../register.php">register</a> here!';
+    echo '<a href="Customer_Reg_Login/Frontend/login.php">login</a> here or <a href="Customer_Reg_Login/Frontend/register.php">register</a> here!';
     echo "</div>";
 }
 ?>

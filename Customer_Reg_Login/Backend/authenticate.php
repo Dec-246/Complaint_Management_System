@@ -1,6 +1,6 @@
 <?php
 
-require 'Includes/db.connect.php';
+require '../../Includes/db.connect.php';
 
 // check data from login form was submitted, isset() will check if data exists
 if (!isset($_POST['username'], $_POST['password'])) {
@@ -21,7 +21,7 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM customer_ac
     }
 
     if ($stmt->num_rows === 0) {
-        header ('Location: ../Includes/wrongCreds.php');
+        header ('Location: ../../Includes/wrongCreds.php');
         exit;
     }
     
@@ -48,17 +48,17 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM customer_ac
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['account_id'] = $id;
             // Output success message
-            header('Location: ../index.php');
+            header('Location: ../../index.php');
             exit;
         } else {
             // Incorrect password
 
-            header ('Location: ../Includes/wrongCreds.php');
+            header ('Location: ../../Includes/wrongCreds.php');
         
         }
     } else {
         // Incorrect username
-        header ('Location: ../Includes/wrongCreds.php');
+        header ('Location: ../../Includes/wrongCreds.php');
         exit;
     }
 

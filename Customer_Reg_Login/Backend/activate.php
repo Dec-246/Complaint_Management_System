@@ -1,5 +1,5 @@
 <?php
-require 'Includes/db.connect.php';
+require '../../Includes/db.connect.php';
 
 // check if the email and code exists...
 if (isset($_GET['email'], $_GET['code']) && !empty($_GET['email']) && !empty($_GET['code'])) {

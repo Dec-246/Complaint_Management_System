@@ -1,5 +1,5 @@
 <?php
-require 'Includes/db.connect.php';
+require '../../Includes/db.connect.php';
 
 ?>
 
@@ -8,19 +8,19 @@ require 'Includes/db.connect.php';
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- mobile phones -->
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="CSS/global.css"> 
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="../../CSS/global.css"> 
 
     <!-- tablets/ large phones -->
-<link rel="stylesheet" media="screen and (min-width: 600px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 600px)" href="../../CSS/global.css">
 
     <!-- landscape tablets -->
-<link rel="stylesheet" media="screen and (min-width: 768px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 768px)" href="../../CSS/global.css">
     
 <!-- laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 992px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 992px)" href="../../CSS/global.css">
 
 <!-- large laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 1200px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 1200px)" href="../../CSS/global.css">
 
 <title>Account not activated!</title>
 </head>

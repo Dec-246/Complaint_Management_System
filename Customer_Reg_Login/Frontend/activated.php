@@ -1,5 +1,5 @@
 <?php
-require 'Includes/db.connect.php';
+require '../../Includes/db.connect.php';
 
 ?>
 
@@ -8,19 +8,19 @@ require 'Includes/db.connect.php';
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- mobile phones -->
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="CSS/global.css"> 
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="../../CSS/global.css"> 
 
     <!-- tablets/ large phones -->
-<link rel="stylesheet" media="screen and (min-width: 600px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 600px)" href="../../CSS/global.css">
 
     <!-- landscape tablets -->
-<link rel="stylesheet" media="screen and (min-width: 768px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 768px)" href="../../CSS/global.css">
     
 <!-- laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 992px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 992px)" href="../../CSS/global.css">
 
 <!-- large laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 1200px)" href="CSS/global.css">
+<link rel="stylesheet" media="screen and (min-width: 1200px)" href="../../CSS/global.css">
 
 <title>Activated</title>
 </head>
@@ -38,7 +38,7 @@ require 'Includes/db.connect.php';
 // Ensure registration values not null
 if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
     echo "<div class='checkEmail'>";
-    echo 'Your account is now activated! You can now <a href="../login.php">login</a>!';
+    echo 'Your account is now activated! You can now <a href="Customer_Reg_Login/Frontend/login.php">login</a>!';
     echo "</div>";
 }
 ?>

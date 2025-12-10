@@ -3,13 +3,13 @@
 
 <?php 
 //Using sessions so need to initialise
-require 'Includes/db.connect.php';
+require '../../Includes/db.connect.php';
 
 
 //redirect user to home page if user logged in
 if (isset($_SESSION['account_loggedIn'])) {
     //setting redirectory to staff home page
-    header('Location: index.php');
+    header('Location: ../../index.php');
     exit;
 }
 ?>
@@ -19,16 +19,16 @@ if (isset($_SESSION['account_loggedIn'])) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1">
-        <link href="CSS/global.css" rel="stylesheet" type="text/css">
-        <title>Login</title>
+        <link href="../../CSS/global.css" rel="stylesheet" type="text/css">
+        <title>Customer Login</title>
     </head>
     
     <body>
         <div class="login"></div>
 
-            <form action="authenticate.php" method="post" class="form login-form">
+            <form action="../Backend/authenticate.php" method="post" class="form login-form">
             
-            <h1>Staff Login</h1>
+            <h1>Customer Login</h1>
 
             <label class="form-label" for="username">Username</label>
             <div class="form-group">

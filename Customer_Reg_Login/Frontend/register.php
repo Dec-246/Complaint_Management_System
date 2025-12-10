@@ -1,11 +1,11 @@
 <?php 
 ini_set('display_errors', 0);
-require 'Includes/db.connect.php';
+require '../../Includes/db.connect.php';
 
 //redirect user to home page if user logged in
 if (isset($_SESSION['account_loggedIn'])) {
     //setting redirectory to staff home page
-header("Location: .././index.php");
+header('Location: ../../index.php');
     exit;
 }
 ?>
@@ -15,7 +15,7 @@ header("Location: .././index.php");
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1">
-        <link href="CSS/global.css" rel="stylesheet" type="text/css">
+        <link href="../../CSS/global.css" rel="stylesheet" type="text/css">
         <title>Register</title>
     </head>
     <body>
@@ -23,7 +23,7 @@ header("Location: .././index.php");
 
             
     
-            <form action="registerProcess.php" method="post" class="form login-form">
+            <form action="../Backend/registerProcess.php" method="post" class="form login-form">
             
             <?php
             if ($_SESSION['existError'] == 1){
@@ -48,7 +48,7 @@ header("Location: .././index.php");
             }
             ?>
 
-            <h1>Staff Register</h1>
+            <h1>Customer Register</h1>
 
             <label class="form-label" for="username">Username</label>
             <div class="form-group">
