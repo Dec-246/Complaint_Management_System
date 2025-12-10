@@ -1,3 +1,11 @@
+next steps
+- create user table in database
+- tweak pre-made files to connect to user table (Login)
+- JOIN tenant ID to user reg
+- create complaints table
+- create tenant table
+- 
+
 Complaint management system database
 
 staff accounts table | 
