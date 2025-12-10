@@ -1,0 +1,65 @@
+Complaint management system database
+
+staff accounts table | 
+- ID, 
+- username, 
+- password, 
+- email, 
+- registered date, 
+- activation code, 
+- departmentTypeIs (dropdown) , 
+- isAvailable (Boolean)
+
+tenant (company) table
+- tenant id
+- (business) name
+
+User accounts table |
+- ID
+- Username
+- password
+- email
+- registered date
+- activation data
+
+customer complaint table
+- ID (int, AI), 
+- name (int), 
+- status, 
+- Description (String), 
+[- type, 
+- priority (low, mid, high), 
+- department, 
+- estimated resolution times] == based on keywords (default?)
+- update time (TimeDate Stamp)
+- isSolved (Boolean)
+
+
+
+use W3 schools to import SQL into phpMyAdmin for quicker table creation
+https://www.w3schools.com/php/php_mysql_create_table.asp
+
+
+https://www.youtube.com/watch?v=oSFKPqiQLxw - joining tables
+https://www.youtube.com/watch?v=bEHDBtBwTMA - basic SELECT SQL statements
+
+
+
+Checklist
+
+- create complaint table in database
+- create button icon for chatbot (hovering button- directing to coming soon screen)
+- 
+
+Functional req
+- log complaint
+- automatic categorise complaint (based on type, fills priority, department, est resolution time)
+- complaint assigned to staff based on dept & availability
+
+Customer
+- customers track status, updated time, est resolution time, 
+- staff mark solved complaint, user confirm
+
+Staff
+- staff update status
+

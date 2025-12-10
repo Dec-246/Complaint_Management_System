@@ -23,6 +23,7 @@
 <body>
 <style>
     body{
+        /* add to body in css file. remove from main html */
         background-image:url("IMG/backgroundImage.png");
     }
 </style>
