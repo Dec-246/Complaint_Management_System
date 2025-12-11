@@ -1,20 +1,6 @@
 <?php
-require '../../Includes/db.connect.php';
-require '../Backend/authoriseUser.php';
-
-
-
-//  don't have email or registered info stored in sessions so instead get results from database
-$stmt = $con->prepare('SELECT email, registered FROM customer_accounts WHERE id = ?');
-
-// using account ID to get account info
-$stmt->bind_param('i', $_SESSION['account_id']);
-$stmt->execute();
-$stmt->bind_result($email, $registered);
-$stmt->fetch();
-$stmt->close();
+require '../Backend/profileProcess.php';
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -55,6 +41,11 @@ $stmt->close();
     <div class="profInfo">
     <strong>Registered:</strong><br>
     <?= htmlspecialchars($registered)?>
+    </div>
+
+    <div class="profInfo">
+    <strong>Tenant:</strong><br>
+    <?= htmlspecialchars($tenant_name)?>
     </div>
 
 </div>
