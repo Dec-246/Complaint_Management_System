@@ -68,6 +68,16 @@ header('Location: ../../index.php');
                 <input class="form-input" type="password" name="password" placeholder="Password" id="password" autocomplete="new-password" required>
             </div>
     
+            <label>Select Tenant:</label>
+            <div class="form-group">
+                <select class="tenantStyle" name="tenant_id" style="text-align: center; margin: auto; width:100%;">
+                    <?php
+                        require'../Backend/tenantInfo.php';
+                    ?>
+                </select><br>
+            </div><br>
+
+        
             <button class="btn blue" type="submit">Register</button>
                 
             <p class="register-link">Already have an account? <a href="login.php" class="form-link">Login</a></p>

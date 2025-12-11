@@ -18,14 +18,14 @@ if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     // setting error message as a session 
     $_SESSION['emailValidation'] = 2;
     //redirecting user to register as reg has failed
-    header("Location: ../Customer_Reg_Login/Frontend/register.php");
+    header("Location: ../Frontend/register.php");
 }
 
 // ValidatION for username (must be alphanumeric)
 if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['username']) == 0) {
 
     $_SESSION['usernameValidation'] = 3;
-    header("Location: ../Customer_Reg_Login/Frontend/register.php");
+    header("Location: ../Frontend/register.php");
     //exit('Username is not valid!');
 }
 
@@ -33,7 +33,7 @@ if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['username']) == 0) {
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
 
     $_SESSION['passwordValidation'] = 4;
-    header("Location: ../Customer_Reg_Login/Frontend/register.php");
+    header("Location: ../Frontend/register.php");
     //exit('Password must be between 5 and 20 characters long!');
 }
 
@@ -51,7 +51,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM customer_accounts WHERE user
         $_SESSION['existError'] = 1;
 
         //print_r($_SESSION);
-        header("Location: ../Customer_Reg_Login/Frontend/register.php");
+        header("Location: ../Frontend/register.php");
         exit;
         //  echo 'Username already exists! Please choose another! ';
 
@@ -61,17 +61,17 @@ if ($stmt = $con->prepare('SELECT id, password FROM customer_accounts WHERE user
         $registered = date('Y-m-d H:i:s');
         // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
+        $tenant_id = $_POST['tenant_id'];
 
         // Username does not exist, insert new account
-        if ($stmt = $con->prepare('INSERT INTO customer_accounts (username, password, email, registered, activation_code) VALUES (?, ?, ?, ?, ?)')) {
+        if ($stmt = $con->prepare('INSERT INTO customer_accounts (username, password, email, registered, activation_code, tenant_id) VALUES (?, ?, ?, ?, ?, ?)')) {
 
 
             // Creating unique activation code- unique ID sent to users email address
             $uniqid = sha1($_POST['username'] . uniqid());
 
             // Bind POST data to the prepared statement
-            $stmt->bind_param('sssss', $_POST['username'], $password, $_POST['email'], $registered, $uniqid);
+            $stmt->bind_param('ssssss', $_POST['username'], $password, $_POST['email'], $registered, $uniqid, $tenant_id);
 
             $stmt->execute();
 
@@ -84,7 +84,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM customer_accounts WHERE user
             //  headers
             $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
             // Update the activation variable below
-            $activate_link = 'http://localhost/ComplaintManagementSystem/activate.php?email=' . urlencode($_POST['email']) . '&code=' . urlencode($uniqid);
+            $activate_link = 'http://localhost/ComplaintManagementSystem/Customer_Reg_Login/Backend/activate.php?email=' . urlencode($_POST['email']) . '&code=' . urlencode($uniqid);
 
             // Email message
             $message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
@@ -99,7 +99,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM customer_accounts WHERE user
                 unset($_SESSION['existError']);
             }
             // successful redirect 
-            header("Location: ../Customer_Reg_Login/Frontend/accountInactive.php");
+            header("Location: ../Frontend/accountInactive.php");
         } else {
             echo 'Could not prepare statement!';
         }

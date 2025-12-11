@@ -20,11 +20,11 @@ if (isset($_GET['email'], $_GET['code']) && !empty($_GET['email']) && !empty($_G
 				$stmt->execute();
 				// Output success message
 
-				header('Location: ../Customer_Reg_Login/Frontend/activated.php');
+				header('Location: ../Frontend/activated.php');
 				//echo 'Your account is now activated! You can now <a href="login.php">login</a>!';
 			}
 		} else {
-			header('Location: ../Customer_Reg_Login/Frontend/alreadyActivated.php');
+			header('Location: ../Frontend/alreadyActivated.php');
 			//echo 'The account is already activated or doesn\'t exist!';
 		}
 	}
