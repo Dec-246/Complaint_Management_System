@@ -1,10 +1,9 @@
 next steps
-- create user table in database
-- tweak pre-made files to connect to user table (Login)
+- create user table in database [x]
+- tweak pre-made files to connect to user table (Login) [x]
 - JOIN tenant ID to user reg
 - create complaints table
 - create tenant table
-- 
 
 Complaint management system database
 
@@ -18,29 +17,44 @@ staff accounts table |
 - departmentTypeIs (dropdown) , 
 - isAvailable (Boolean)
 
-tenant (company) table
-- tenant id
-- (business) name
+staff department type [JOINED to staff accounts] [used as dropdown]
+- id
+- name
+- staff_id			[Staff Accounts table FK]
 
-User accounts table |
+tenant (company) table
+- tenant_id
+- name
+- customer_id			[Customer Accounts table FK]
+
+Customer_Accounts table |
 - ID
 - Username
 - password
 - email
 - registered date
-- activation data
+- activation code
+- tenant name			[Tenant table FK] (FOREIGN KEY)
 
 customer complaint table
 - ID (int, AI), 
-- name (int), 
+- name (string), 
 - status, 
-- Description (String), 
-[- type, 
+- Description (String),
+- complaint type name		[Complaint Type table]
+- update_time			changes when agent has updated status
+- solved (Boolean)		changes when user confirms
+
+complaint type table		{separate table for complaint type- all have unique ID- hardcode all complaint types}
+- id
+- type name
+- priority
+- department
+- estimated resolution times
+
 - priority (low, mid, high), 
 - department, 
 - estimated resolution times] == based on keywords (default?)
-- update time (TimeDate Stamp)
-- isSolved (Boolean)
 
 
 
