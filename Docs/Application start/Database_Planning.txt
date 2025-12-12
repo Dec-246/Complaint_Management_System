@@ -15,10 +15,15 @@ NEED
 - allow staff to update time of status update
 - searchable dropdown for complaint type		[add more complaint types- user searches from big list]
 - https://www.w3schools.com/howto/howto_js_filter_dropdown.asp#:~:text=Example%20Explained,dropdown%20menu%20correctly%20with%20CSS 
+- Wireframe
+- c4 level 4 diagram
+- documents
+
 
 COULD
 - modify timedate in profile (currently one hour off)
 - create button icon for chatbot (hovering button- directing to coming soon screen)
+- filter dropdown by search -- https://www.w3schools.com/howto/howto_js_filter_dropdown.asp#:~:text=Example%20Explained,dropdown%20menu%20correctly%20with%20CSS.
 
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

@@ -18,13 +18,20 @@ $stmt = $con->prepare(
     complaint_type.estimated_resolution_times AS complaint_estimated_res_time,
     -- customer_accounts table
     customer_accounts.username AS customer_name,
+    -- status table
+    status.type AS status_type,
     -- accounts table
     accounts.username AS staff_name
     FROM complaint 
         JOIN complaint_type 
             ON complaint.complaint_type_id = complaint_type.id
+
         JOIN customer_accounts
             ON complaint.customer_id = customer_accounts.id
+
+        JOIN status
+            ON complaint.status_id = status.id
+
         LEFT JOIN accounts
             ON complaint.staff_id = accounts.id
     WHERE complaint.customer_id = ?');
@@ -33,7 +40,7 @@ $stmt = $con->prepare(
 // using account ID to get account info
 $stmt->bind_param('i', $_SESSION['customer_id']);
 $stmt->execute();
-$stmt->bind_result($complaint_id, $name, $description, $update, $is_solved, $complaint_type_name, $estimated_resolution_times, $customer_name, $staff_name);
+$stmt->bind_result($complaint_id, $name, $description, $update, $is_solved, $complaint_type_name, $estimated_resolution_times, $customer_name, $status_type, $staff_name);
 $result = $stmt->get_result(); 
 
 

@@ -1,3 +1,6 @@
+<!-- References -->
+ <!-- https://www.geeksforgeeks.org/php/how-to-insert-form-data-into-database-using-php/ -->
+
 <?php
 // including session and db connection in own file
 require '../../Includes/db.connect.php';
@@ -112,6 +115,11 @@ if ($activation_code !== 'activated') {
         <div class="profInfo">
         <strong>Is issue solved:</strong><br>
         <?= $c['is_solved'] ? "Yes" : "No" ?>
+        </div>
+
+        <div class="profInfo">
+        <strong>Status Type:</strong><br>
+        <?= htmlspecialchars($c['status_type']) ?>
         </div>
     
         <div class="profInfo">
