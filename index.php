@@ -1,7 +1,10 @@
 <?php
 // including session and db connection in own file
 require 'Includes/db.connect.php';
-
+//relocates to home page
+require 'Customer_Reg_Login/Backend/authoriseUser.php';
+// allows us to use user data (tenant name)
+require 'Customer_Reg_Login/Backend/profileProcess.php';
 
 // If user not logged in, redirect to login page
 if (!isset($_SESSION['account_loggedIn'])) {
@@ -54,7 +57,7 @@ if ($activation_code !== 'activated') {
 </style>
 
 <div class="header">
-    <h1>NatBest</h1>
+    <h1><?= htmlspecialchars($tenant_name)?></h1>
     <p>Everyday beautiful life</p>
 
     <h2>Welcome back <?= htmlspecialchars($_SESSION['username'], ENT_QUOTES) ?></h2>
@@ -67,7 +70,12 @@ if ($activation_code !== 'activated') {
     <!-- controls the white box/ space -->
     <div style="flex-grow: 1;">
         <!-- controls the button -->
-        <br><button class="logComplaint" onclick="alert('You can log any complaint here...')">Log complaint</button>
+        <br><button class="logComplaint" onclick="alert('You can log any complaint here...')" >Log complaint</button>
+    </div>
+
+    <div class="logComplaint" style="flex-grow: 1;">
+        <!-- controls the button -->
+        <br><a href="Customer_Reg_Login/Frontend/log_complaint.php" class="logComplaint">Log Complaint</a>
     </div>
 
     <div style="flex-grow: 1;">

@@ -1,6 +1,6 @@
 <?php
-require '../../Includes/db.connect.php';
-require '../Backend/authoriseUser.php';
+//require '../../Includes/db.connect.php';
+//require '../Backend/authoriseUser.php';
 
 
 
@@ -17,4 +17,7 @@ $stmt->execute();
 $stmt->bind_result($email, $registered, $tenant_name);
 $stmt->fetch();
 $stmt->close();
+
+//https://stackoverflow.com/questions/17495547/format-date-within-an-echo 
+$registered = date("F j, Y g:i A", strtotime($registered));
 ?>

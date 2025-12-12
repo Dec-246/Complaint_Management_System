@@ -315,7 +315,7 @@ div.header h1 {
 }
 
 /* logging complaint button */
-button.logComplaint{
+.logComplaint{
   position: sticky;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
@@ -334,6 +334,8 @@ button.logComplaint{
   margin: auto;
   width: 50%;
   margin-top: 3%;
+
+  background-color: red;
 }
 .logComplaint:hover {
   background-color: #a2b9ff;

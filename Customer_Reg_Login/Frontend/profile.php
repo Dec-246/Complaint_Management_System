@@ -1,4 +1,7 @@
 <?php
+
+require '../../Includes/db.connect.php';
+require '../Backend/authoriseUser.php';
 require '../Backend/profileProcess.php';
 ?>
 
@@ -22,7 +25,7 @@ require '../Backend/profileProcess.php';
 </style>
 
 <div class="header">
-    <h1>NatBest</h1>
+    <h1><?= htmlspecialchars($tenant_name)?></h1>
     <p>Everyday beautiful life</p>
 </div>
 
