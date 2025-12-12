@@ -1,4 +1,5 @@
 <?php
+session_destroy();
 
 require '../../Includes/db.connect.php';
 
@@ -46,7 +47,7 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM customer_ac
             // Declare session variables (they basically act like cookies but the data is remembered on the server)
             $_SESSION['account_loggedIn'] = TRUE;
             $_SESSION['username'] = $_POST['username'];
-            $_SESSION['account_id'] = $id;
+            $_SESSION['customer_id'] = $id;
             // Output success message
             header('Location: ../../index.php');
             exit;

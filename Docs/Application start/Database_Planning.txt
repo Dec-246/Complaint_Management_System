@@ -14,6 +14,7 @@ NEED
 - allow staff to change status (Opened, Active, In Progress, On Hold, Delayed, Resolved, Cancelled)
 - allow staff to update time of status update
 - searchable dropdown for complaint type		[add more complaint types- user searches from big list]
+- https://www.w3schools.com/howto/howto_js_filter_dropdown.asp#:~:text=Example%20Explained,dropdown%20menu%20correctly%20with%20CSS 
 
 COULD
 - modify timedate in profile (currently one hour off)

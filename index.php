@@ -70,12 +70,17 @@ if ($activation_code !== 'activated') {
     <!-- controls the white box/ space -->
     <div style="flex-grow: 1;">
         <!-- controls the button -->
-        <br><button class="logComplaint" onclick="alert('You can log any complaint here...')" >Log complaint</button>
+        <br><button class="supportPersonsInfo" onclick="alert('You can log any complaint here...')" >Log complaint</button>
     </div>
 
     <div class="logComplaint" style="flex-grow: 1;">
         <!-- controls the button -->
-        <br><a href="Customer_Reg_Login/Frontend/log_complaint.php" class="logComplaint">Log Complaint</a>
+        <br><a href="Customer_Reg_Login/Frontend/log_complaint.php" class="supportPersonsInfo">Log Complaint</a><br>
+    </div>
+
+    <div class="logComplaint" style="flex-grow: 1;">
+        <!-- controls the button -->
+        <br><a href="" class="supportPersonsInfo">View complaint History</a><br>
     </div>
 
     <div style="flex-grow: 1;">

@@ -1,5 +1,6 @@
 <!-- test details
- username & password = test -->
+ username: Ctest 
+ password: test -->
 
 <?php 
 //Using sessions so need to initialise

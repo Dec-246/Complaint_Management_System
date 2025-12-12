@@ -72,7 +72,7 @@ header('Location: ../../index.php');
             <div class="form-group">
                 <select class="tenantStyle" name="tenant_id" style="text-align: center; margin: auto; width:100%;">
                     <?php
-                        require'../Backend/tenantInfo.php';
+                        require '../Backend/tenantInfo.php';
                     ?>
                 </select><br>
             </div><br>
