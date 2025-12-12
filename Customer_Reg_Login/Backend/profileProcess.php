@@ -12,7 +12,7 @@ $stmt = $con->prepare(
     WHERE customer.id = ?');
 
 // using account ID to get account info
-$stmt->bind_param('i', $_SESSION['account_id']);
+$stmt->bind_param('i', $_SESSION['customer_id']);
 $stmt->execute();
 $stmt->bind_result($email, $registered, $tenant_name);
 $stmt->fetch();
