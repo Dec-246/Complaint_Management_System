@@ -1,6 +1,3 @@
-<!-- References -->
- <!-- https://www.geeksforgeeks.org/php/how-to-insert-form-data-into-database-using-php/ -->
-
 <?php
 // including session and db connection in own file
 require '../../Includes/db.connect.php';
@@ -9,6 +6,7 @@ require '../Backend/authoriseUser.php';
 // allows us to use user data (tenant name)
 require '../Backend/complaintHistoryProcess.php';
 require '../Backend/profileProcess.php';
+
 
 // If user not logged in, redirect to login page
 if (!isset($_SESSION['account_loggedIn'])) {
@@ -34,11 +32,11 @@ $stmt->close();
 
 // Check if account activated
 if ($activation_code !== 'activated') {
-	// account not activated, redirect to login
+    // account not activated, redirect to login
     header('Location: accountInactive.php');
     echo 'not activated';
     exit;
-} 
+}
 
 
 ?>
@@ -46,111 +44,127 @@ if ($activation_code !== 'activated') {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- mobile phones -->
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="../../CSS/global.css"> 
+    <!-- mobile phones -->
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../CSS/global.css">
 
     <!-- tablets/ large phones -->
-<link rel="stylesheet" media="screen and (min-width: 600px)" href="../../CSS/global.css">
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href="../../CSS/global.css">
 
     <!-- landscape tablets -->
-<link rel="stylesheet" media="screen and (min-width: 768px)" href="../../CSS/global.css">
-    
-<!-- laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 992px)" href="../../CSS/global.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../../CSS/global.css">
 
-<!-- large laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 1200px)" href="../../CSS/global.css">
+    <!-- laptops/ desktops -->
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="../../CSS/global.css">
 
-<title>Home Screen</title>
+    <!-- large laptops/ desktops -->
+    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="../../CSS/global.css">
+
+    <title>Home Screen</title>
 </head>
 
 <body>
-    <?php include '../Includes/navbar.php';?>
-<style>
-    body{
-        background-image:url("IMG/backgroundImage.png");
-    }
-</style>
+    <?php include '../Includes/navbar.php'; ?>
+    <style>
+        body {
+            background-image: url("IMG/backgroundImage.png");
+        }
+    </style>
 
-<div class="header">
-    <h1><?= htmlspecialchars($tenant_name)?></h1>
-    <p>Everyday beautiful life</p>
+    <div class="header">
+        <h1><?= htmlspecialchars($tenant_name) ?></h1>
+        <p>Everyday beautiful life</p>
 
-    <h2>Welcome back <?= htmlspecialchars($_SESSION['username'], ENT_QUOTES) ?></h2>
-</div>
-
-
-
-<!-- controls the full red box -->
-<div class="userDashboardButtons">
-
-    <?php foreach ($complaints as $c): ?>
-
-   
-    <!-- controls the white box/ space -->
-    <div class="profInfo">
-
-        <div class="profInfo">
-        <strong>Complaint reference number:</strong><br>
-        <?= htmlspecialchars($c['complaint_id']) ?>
-        </div>
-    
-        <div class="profInfo">
-        <strong>Complaint name:</strong><Br>
-        <?= htmlspecialchars($c['name']) ?>
-        </div>
-    
-        <div class="profInfo">
-        <strong>Description:</strong><br>
-        <?= htmlspecialchars($c['description']) ?>
-        </div>
-    
-        <div class="profInfo">
-        <strong>Last Updated:</strong><br>
-        <?= htmlspecialchars($c['update_time']) ?>
-        </div>
-    
-        <div class="profInfo">
-        <strong>Is issue solved:</strong><br>
-        <?= $c['is_solved'] ? "Yes" : "No" ?>
-        </div>
-
-        <div class="profInfo">
-        <strong>Status Type:</strong><br>
-        <?= htmlspecialchars($c['status_type']) ?>
-        </div>
-    
-        <div class="profInfo">
-        <strong>Complaint Type:</strong><br>
-        <?= htmlspecialchars($c['complaint_type_name']) ?>
-        </div>
-    
-        <div class="profInfo">
-        <strong>Estimated resolution times:</strong><br>
-        <?= htmlspecialchars($c['complaint_estimated_res_time']) ?> <p> Days</p>
-        </div>
-    
-        <div class="profInfo">
-        <strong>Customer Name:</strong><br>
-        <?= htmlspecialchars($c['customer_name']) ?>
-        </div>
-    
-        <div class="profInfo">
-        <strong>Agent Name:</strong><br>
-        <?= htmlspecialchars($c['staff_name'] ?? "Not assigned") ?>
-        </div>
-    
-        <p>-------------------------------------------------------------------------------------------------------------</p>
-
+        <h2>Welcome back <?= htmlspecialchars($_SESSION['username'], ENT_QUOTES) ?></h2>
     </div>
 
-    <?php endforeach; ?>
-</div>
+
+
+    <!-- controls the full red box -->
+    <div class="userDashboardButtons">
+
+        <?php foreach ($complaints as $c): ?>
+
+
+            <!-- controls the white box/ space -->
+            <div class="profInfo">
+
+                <div class="profInfo">
+                    <strong>Complaint reference number:</strong><br>
+                    <?= htmlspecialchars($c['complaint_id']) ?>
+                </div>
+
+                <div class="profInfo">
+                    <strong>Complaint name:</strong><Br>
+                    <?= htmlspecialchars($c['name']) ?>
+                </div>
+
+                <div class="profInfo">
+                    <strong>Description:</strong><br>
+                    <?= htmlspecialchars($c['description']) ?>
+                </div>
+
+                <div class="profInfo">
+                    <strong>Last Updated:</strong><br>
+                    <?= htmlspecialchars($c['update_time']) ?>
+                </div>
+
+                <div class="profInfo">
+                    <strong>Status Type:</strong><br>
+                    <?= htmlspecialchars($c['status_type']) ?>
+                </div>
+
+                <div class="profInfo">
+                    <strong>Complaint Type:</strong><br>
+                    <?= htmlspecialchars($c['complaint_type_name']) ?>
+                </div>
+
+                <div class="profInfo">
+                    <strong>Estimated resolution times:</strong><br>
+                    <?= htmlspecialchars($c['complaint_estimated_res_time']) ?> <p> Days</p>
+                </div>
+
+                <div class="profInfo">
+                    <strong>Customer Name:</strong><br>
+                    <?= htmlspecialchars($c['customer_name']) ?>
+                </div>
+
+                <div class="profInfo">
+                    <strong>Agent Name:</strong><br>
+                    <?= htmlspecialchars($c['staff_name'] ?? "Not assigned") ?>
+                </div>
+
+                <div class="profInfo">
+                    <strong>Is issue solved:</strong><br>
+                    <?= $c['is_solved'] ? "Yes" : "No" ?>
+                </div>
+
+                <form action="changeSolveStatusProcess.php" method="post" class="profInfo">
+                    <input type="hidden" name="complaint_id" value="<?= $c['complaint_id'] ?>">
+
+                    <label>Change Solve Status:</label>
+
+                    <div class="form-group">
+                        <select class="tenantStyle" name="is_solved_id" style="text-align: center; margin: auto; width:100%;">
+                            <?php 
+                            $c_current = $c;
+                            require 'solvedInfo.php'; ?>
+                        </select><br>
+                    </div><br>
+                    <button class="btn blue" type="submit">Update Solve Status</button>
+
+                </form>
+
+                <p>-------------------------------------------------------------------------------------------------------------</p>
+
+            </div>
+
+        <?php endforeach; ?>
+    </div>
 
 
 </body>
+
 </html>
-
-

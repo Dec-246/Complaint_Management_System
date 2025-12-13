@@ -60,23 +60,24 @@ if ($activation_code !== 'activated') {
     <h2>Welcome back <?= htmlspecialchars($_SESSION['username'], ENT_QUOTES) ?></h2>
 </div>
 
-<p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>
+
 
 <!-- controls the full red box -->
 <div class="userDashboardButtons">
     <!-- controls the white box/ space -->
-    <div style="flex-grow: 1;">
+    <div class="supportPersonsInfo" style="flex-grow: 1;">
         <!-- controls the button -->
-        <br><button class="logComplaint" onclick="alert('You can log any complaint here...')">Log complaint</button>
+        <br><a href="viewAssignedComplaints.php" class="supportPersonsInfo">Viewing Assigned Complaints</a><br>
     </div>
 
-    <div style="flex-grow: 1;">
-        <!-- Using break tag to create space above the buttons  -->
-        <Br><button class="supportPersonsInfo" onclick="alert('You can view the contact info to your support person here...')">View Supports info</button>
+    <div class="supportPersonsInfo" style="flex-grow: 1;">
+        <!-- controls the button -->
+        <br><a href="" class="supportPersonsInfo">Log Complaint</a><br>
     </div>
 
-    <div style="flex-grow: 1;">
-        <br><button class="complaintStatus" onclick="alert('You can view the status of your complaint/s here...')">View Complaint Status</button>
+    <div class="supportPersonsInfo" style="flex-grow: 1;">
+        <!-- controls the button -->
+        <br><a href="" class="supportPersonsInfo">Log Complaint</a><br>
     </div>
 </div>
 

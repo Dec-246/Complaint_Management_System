@@ -21,10 +21,6 @@ if (!$customer_id) {
 
 
 
-// $CompName = mysqli_real_escape_string($con, $_POST['name']);
-// $CompDesc = mysqli_real_escape_string($con, $_POST['description']);
-// $CompTypeId = mysqli_real_escape_string($con, $_POST['complaint_type_id']);
-
 $sql = "INSERT INTO complaint (name, description, complaint_type_id, customer_id)
 VALUES (?, ?, ?, ?)";
 
