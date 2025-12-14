@@ -3,6 +3,15 @@
 //require '../Backend/authoriseUser.php';
 $account_id = $_SESSION['account_id'];
 
+//get 1 random staff member that is available and assign to complaint
+// SELECT id
+// FROM accounts
+// WHERE is_available == 1 (true)
+// ORDER BY RAND( )
+// LIMIT 1
+// assign this value to an array [$value] 
+// input this value into complaint [staff_id] column
+
 
 //  don't have email or registered info stored in sessions so instead get results from database
 $stmt = $con->prepare(

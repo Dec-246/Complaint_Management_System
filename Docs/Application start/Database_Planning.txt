@@ -1,3 +1,6 @@
+RENAME NEW XAMPP FILE TO 'xampp' CHANGE NAME OF OLD XAMPP FILE TO VIEW PROJECT IN LOCALHOST BROWSER
+
+
 next steps
 - create user table in database [x]
 - tweak pre-made files to connect to user table (Login) [x]
@@ -39,7 +42,7 @@ complaint gets submitted with
 - status [DEFAULT == Active]
 - 
 
-status will be changed via dropdown on frontend and default to active. this will be shown in database with complaints on staff dashboard
+status will be changed via dropdown on frontend and default to opened. this will be shown in database with complaints on staff dashboard
 ----------------------------------
 Complaint department table
 - ID
@@ -99,7 +102,18 @@ complaint type table		{separate table for complaint type- all have unique ID- ha
 - department_id			[Department table FK] (FOREIGN KEY)
 - estimated resolution times	[IN DAYS]
 
+DEFAULTS
+- [status table-] type column = 'Opened'
+- [solved_status] type column = 'No'
 
+status table
+- Opened
+- Active
+- In progress
+- On hold
+- Delayed
+- Resolved
+- Cancelled
 
 
 
