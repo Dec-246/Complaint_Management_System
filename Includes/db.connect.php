@@ -4,7 +4,7 @@ session_start();
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
-$DATABASE_NAME = 'ComplaintManagementSystem';
+$DATABASE_NAME = 'complaint_management_system';
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 
