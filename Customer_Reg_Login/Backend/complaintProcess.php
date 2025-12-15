@@ -5,10 +5,6 @@ require '../../Includes/db.connect.php';
 // var_dump($_SESSION);
 // exit;
 
-// // check if the form has been submitted
-// if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
-//     exit('Please complete the registration form!');
-// }
 
 // NOTES
 // -- USE stmt FOR PREPARED STATEMENTS
@@ -80,28 +76,8 @@ $stmt = $con->prepare(
 ");
 $stmt->bind_param("ssiii", $name, $description, $complaint_type_id, $customer_id, $staff_id);
 
-
-
-
-// $sql = "INSERT INTO complaint (
-// name, 
-// description, 
-// complaint_type_id, 
-// customer_id)
-// VALUES (?, ?, ?, ?)";
-
-// $stmt = $con->prepare($sql);
-// $stmt->bind_param(
-//   "ssii",
-//   $name,
-//   $description,
-//   $complaint_type_id,
-//   $customer_id
-// );
-
 $comp_submitted = $stmt->execute(); 
 $stmt->close();
-
 
 if ($comp_submitted) {
   header("Location: ../Frontend/complaintSuccess.php");
@@ -109,5 +85,3 @@ if ($comp_submitted) {
 } else {
   echo "Error: " . $con->error;
 }
-
-
