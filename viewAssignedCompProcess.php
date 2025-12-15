@@ -3,14 +3,7 @@
 //require '../Backend/authoriseUser.php';
 $account_id = $_SESSION['account_id'];
 
-//get 1 random staff member that is available and assign to complaint
-// SELECT id
-// FROM accounts
-// WHERE is_available == 1 (true)
-// ORDER BY RAND( )
-// LIMIT 1
-// assign this value to an array [$value] 
-// input this value into complaint [staff_id] column
+
 
 
 //  don't have email or registered info stored in sessions so instead get results from database
@@ -44,14 +37,15 @@ $stmt = $con->prepare(
             -- here i am getting the results for logged in user
             -- only the complaints that match the staff member ID & same department ID will pop up.
     WHERE complaint.staff_id = staff.id
-        && complaint_type.department_id = staff.department_id');
+        && complaint_type.department_id = staff.department_id'
+);
 
 
 // using account ID to get account info
 $stmt->bind_param('i', $_SESSION['account_id']);
 $stmt->execute();
 $stmt->bind_result($complaint_id, $name, $description, $complaint_type_name, $complaint_department, $priority, $customer_name, $status_type);
-$result = $stmt->get_result(); 
+$result = $stmt->get_result();
 
 
 // while ($stmt->fetch()) {
@@ -71,5 +65,3 @@ $result = $stmt->get_result();
 $complaints = $result->fetch_all(MYSQLI_ASSOC);
 //$stmt->fetch();
 $stmt->close();
-
-?>
