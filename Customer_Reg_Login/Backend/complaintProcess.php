@@ -1,5 +1,8 @@
 <?php
 require '../../Includes/db.connect.php';
+// submitting complaint to DB
+// assigns the complaint to random available & appropriate (department) agent 
+
 
 // debub tool
 // var_dump($_SESSION);
