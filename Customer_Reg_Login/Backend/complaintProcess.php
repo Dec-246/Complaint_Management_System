@@ -1,3 +1,6 @@
+<!-- References -->
+ <!-- https://stackoverflow.com/a/4614159 (using prepared statements) -->
+
 <?php
 require '../../Includes/db.connect.php';
 // submitting complaint to DB

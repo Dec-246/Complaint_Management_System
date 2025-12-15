@@ -1,3 +1,6 @@
+<!-- References -->
+ <!-- https://www.w3schools.com/tags/tag_select.asp -->
+
 <?php
 // including session and db connection in own file
 require '../../Includes/db.connect.php';
@@ -81,6 +84,7 @@ if ($activation_code !== 'activated') {
                 <input class="form-input" type="text" name="description" placeholder="Description" id="Description" required>
             </div><br>
 
+            
             <label>Select Complaint Type:</label>
             <div class="form-group">
                 <select class="tenantStyle" name="complaint_type_id" style="text-align: center; margin: auto; width:100%;">
