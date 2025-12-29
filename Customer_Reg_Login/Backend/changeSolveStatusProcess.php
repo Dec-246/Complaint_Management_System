@@ -1,5 +1,5 @@
 <?php
-require 'Includes/db.connect.php';
+require '../../Includes/db.connect.php';
 
 
 $is_solved_id = $_POST['is_solved_id'];
@@ -8,7 +8,7 @@ $complaint_id = $_POST['complaint_id'];
 $account_id = $_SESSION['account_id'];
 
 if (!$account_id) {
-    die("Error: No user ID found! You must log in!");
+  die("Error: No user ID found! You must log in!");
 }
 
 $sql = "UPDATE complaint

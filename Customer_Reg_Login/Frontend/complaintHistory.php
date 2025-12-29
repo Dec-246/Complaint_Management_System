@@ -7,7 +7,6 @@ require '../Backend/authoriseUser.php';
 require '../Backend/complaintHistoryProcess.php';
 require '../Backend/profileProcess.php';
 
-
 // If user not logged in, redirect to login page
 if (!isset($_SESSION['account_loggedIn'])) {
     header('Location: login.php');
@@ -37,10 +36,7 @@ if ($activation_code !== 'activated') {
     echo 'not activated';
     exit;
 }
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -50,7 +46,7 @@ if ($activation_code !== 'activated') {
     <!-- mobile phones -->
     <link rel="stylesheet"  href="../../CSS/global.css"> 
 
-    <title>Home Screen</title>
+    <title>Complaint History</title>
 </head>
 
 <body>
@@ -68,13 +64,10 @@ if ($activation_code !== 'activated') {
         <h2>Welcome back <?= htmlspecialchars($_SESSION['username'], ENT_QUOTES) ?></h2>
     </div>
 
-
-
     <!-- controls the full red box -->
     <div class="OldCompHistory">
 
         <?php foreach ($complaints as $c): ?>
-
 
             <!-- controls the white box/ space -->
             <div class="OldCompHistory1">
@@ -136,11 +129,14 @@ if ($activation_code !== 'activated') {
 
                     <div class="form-group">
                         <select class="tenantStyle" name="is_solved_id" style="text-align: center; margin: auto; width:100%;">
-                            <?php 
-                            $c_current = $c;
-                            require 'solvedInfo.php'; ?>
+                            
+                            <?php $c_current = $c;
+                            require '../Backend/solvedInfo.php'; 
+                            ?>
+
                         </select><br>
                     </div><br>
+
                     <button class="btn blue" type="submit">Update Solve Status</button>
 
                 </form><br>
@@ -151,8 +147,5 @@ if ($activation_code !== 'activated') {
 
         <?php endforeach; ?>
     </div>
-
-
 </body>
-
 </html>

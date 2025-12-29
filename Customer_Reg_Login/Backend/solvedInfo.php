@@ -1,6 +1,6 @@
 <?php
 //GET list of status types
-require '../../Includes/db.connect.php';
+// require '../../Includes/db.connect.php';
 
 $result = $con->query("SELECT id, type FROM solved_status");
 
