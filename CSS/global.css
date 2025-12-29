@@ -1,5 +1,5 @@
 /* ***Menu/ NavBar*** */
-.menu{
+.menu {
   display: flex;
   flex-direction: row;
   background-color: #dee1e6;
@@ -8,7 +8,7 @@
 }
 
 /* *** ACTIVATE *** */
-.activationMessage{
+.activationMessage {
   margin: auto;
   text-align: center;
 
@@ -23,7 +23,8 @@
   margin: 100px auto;
   padding: 35px;
 }
-.checkEmail{
+
+.checkEmail {
   margin: auto;
   text-align: center;
   margin-left: 40%;
@@ -47,22 +48,30 @@
   font-size: 16px;
 }
 
-body, html {
+body,
+html {
   background-color: white;
   margin: 0;
   padding: 0;
 }
 
-h1{
+h1 {
   font-size: 30px;
 }
-h1,h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
   color: #474b50;
   margin: auto;
   text-align: center;
 }
+
 /* controlling whole form */
 .form {
   display: flex;
@@ -78,6 +87,7 @@ h1,h2, h3, h4, h5, h6 {
   margin: 100px auto;
   padding: 35px;
 }
+
 .form .form-label {
   display: block;
   padding: 20px 0 10px 0;
@@ -85,6 +95,7 @@ h1,h2, h3, h4, h5, h6 {
   font-size: 14px;
   color: #474b50;
 }
+
 /* form input box */
 .form .form-group {
   display: flex;
@@ -96,7 +107,8 @@ h1,h2, h3, h4, h5, h6 {
 }
 
 /* login form icons */
-.form .form-group .form-icon-left, .form .form-group .form-icon-right {
+.form .form-group .form-icon-left,
+.form .form-group .form-icon-right {
   fill: #c1c6cb;
   width: 40px;
   position: absolute;
@@ -104,21 +116,27 @@ h1,h2, h3, h4, h5, h6 {
   top: 50%;
   pointer-events: none;
 }
+
 .form .form-group .form-icon-left {
   left: 0;
 }
-.form .form-group .form-icon-left + .form-input {
+
+.form .form-group .form-icon-left+.form-input {
   padding-left: 40px;
 }
+
 .form .form-group .form-icon-right {
   right: 0;
 }
-.form .form-group .form-icon-right + .form-input {
+
+.form .form-group .form-icon-right+.form-input {
   padding-right: 40px;
 }
+
 .form .form-group:focus-within .form-icon-left {
   fill: #989fa8;
 }
+
 .form .form-input {
   width: 100%;
   height: 43px;
@@ -127,24 +145,29 @@ h1,h2, h3, h4, h5, h6 {
   border-radius: 4px;
   color: #000;
 }
+
 .form .form-input::placeholder {
   color: #989fa8;
 }
+
 .form .form-link {
   color: #2a8eeb;
   font-weight: 500;
   text-decoration: none;
   font-size: 14px;
 }
+
 .form .form-link:hover {
   color: green;
 }
+
 .form p.register-link {
   margin: 0;
   padding: 20px 0 0 0;
   font-size: 14px;
   color: #6b7179;
 }
+
 /* login button */
 .btn {
   display: inline-flex;
@@ -163,86 +186,319 @@ h1,h2, h3, h4, h5, h6 {
   height: 42px;
   box-shadow: 0px 0px 6px 1px rgba(45, 57, 68, 0.1);
 }
+
 .btn:hover {
   background-color: green;
 }
-.login h1, .register h1 {
+
+.login h1,
+.register h1 {
   text-align: center;
   font-size: 24px;
   font-weight: 500;
   padding: 15px 0;
   margin: 0;
 }
-.pad-1 { padding: 5px; }
-.mar-1 { margin: 5px; }
-.pad-2 { padding: 10px; }
-.mar-2 { margin: 10px; }
-.pad-3 { padding: 15px; }
-.mar-3 { margin: 15px; }
-.pad-4 { padding: 20px; }
-.mar-4 { margin: 20px; }
-.pad-5 { padding: 25px; }
-.mar-5 { margin: 25px; }
-.pad-bot-1 { padding-bottom: 5px; }
-.pad-top-1 { padding-top: 5px; }
-.pad-left-1 { padding-left: 5px; }
-.pad-right-1 { padding-right: 5px; }
-.pad-x-1 { padding-left: 5px; padding-right: 5px; }
-.pad-y-1 { padding-top: 5px; padding-bottom: 5px; }
-.mar-bot-1 { margin-bottom: 5px; }
-.mar-top-1 { margin-top: 5px; }
-.mar-left-1 { margin-left: 5px; }
-.mar-right-1 { margin-right: 5px; }
-.mar-x-1 { margin-left: 5px; margin-right: 5px; }
-.mar-y-1 { margin-top: 5px; margin-bottom: 5px; }
-.pad-bot-2 { padding-bottom: 10px; }
-.pad-top-2 { padding-top: 10px; }
-.pad-left-2 { padding-left: 10px; }
-.pad-right-2 { padding-right: 10px; }
-.pad-x-2 { padding-left: 10px; padding-right: 10px; }
-.pad-y-2 { padding-top: 10px; padding-bottom: 10px; }
-.mar-bot-2 { margin-bottom: 10px; }
-.mar-top-2 { margin-top: 10px; }
-.mar-left-2 { margin-left: 10px; }
-.mar-right-2 { margin-right: 10px; }
-.mar-x-2 { margin-left: 10px; margin-right: 10px; }
-.mar-y-2 { margin-top: 10px; margin-bottom: 10px; }
-.pad-bot-3 { padding-bottom: 15px; }
-.pad-top-3 { padding-top: 15px; }
-.pad-left-3 { padding-left: 15px; }
-.pad-right-3 { padding-right: 15px; }
-.pad-x-3 { padding-left: 15px; padding-right: 15px; }
-.pad-y-3 { padding-top: 15px; padding-bottom: 15px; }
-.mar-bot-3 { margin-bottom: 15px; }
-.mar-top-3 { margin-top: 15px; }
-.mar-left-3 { margin-left: 15px; }
-.mar-right-3 { margin-right: 15px; }
-.mar-x-3 { margin-left: 15px; margin-right: 15px; }
-.mar-y-3 { margin-top: 15px; margin-bottom: 15px; }
-.pad-bot-4 { padding-bottom: 20px; }
-.pad-top-4 { padding-top: 20px; }
-.pad-left-4 { padding-left: 20px; }
-.pad-right-4 { padding-right: 20px; }
-.pad-x-4 { padding-left: 20px; padding-right: 20px; }
-.pad-y-4 { padding-top: 20px; padding-bottom: 20px; }
-.mar-bot-4 { margin-bottom: 20px; }
-.mar-top-4 { margin-top: 20px; }
-.mar-left-4 { margin-left: 20px; }
-.mar-right-4 { margin-right: 20px; }
-.mar-x-4 { margin-left: 20px; margin-right: 20px; }
-.mar-y-4 { margin-top: 20px; margin-bottom: 20px; }
-.pad-bot-5 { padding-bottom: 25px; }
-.pad-top-5 { padding-top: 25px; }
-.pad-left-5 { padding-left: 25px; }
-.pad-right-5 { padding-right: 25px; }
-.pad-x-5 { padding-left: 25px; padding-right: 25px; }
-.pad-y-5 { padding-top: 25px; padding-bottom: 25px; }
-.mar-bot-5 { margin-bottom: 25px; }
-.mar-top-5 { margin-top: 25px; }
-.mar-left-5 { margin-left: 25px; }
-.mar-right-5 { margin-right: 25px; }
-.mar-x-5 { margin-left: 25px; margin-right: 25px; }
-.mar-y-5 { margin-top: 25px; margin-bottom: 25px; }
+
+.pad-1 {
+  padding: 5px;
+}
+
+.mar-1 {
+  margin: 5px;
+}
+
+.pad-2 {
+  padding: 10px;
+}
+
+.mar-2 {
+  margin: 10px;
+}
+
+.pad-3 {
+  padding: 15px;
+}
+
+.mar-3 {
+  margin: 15px;
+}
+
+.pad-4 {
+  padding: 20px;
+}
+
+.mar-4 {
+  margin: 20px;
+}
+
+.pad-5 {
+  padding: 25px;
+}
+
+.mar-5 {
+  margin: 25px;
+}
+
+.pad-bot-1 {
+  padding-bottom: 5px;
+}
+
+.pad-top-1 {
+  padding-top: 5px;
+}
+
+.pad-left-1 {
+  padding-left: 5px;
+}
+
+.pad-right-1 {
+  padding-right: 5px;
+}
+
+.pad-x-1 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.pad-y-1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.mar-bot-1 {
+  margin-bottom: 5px;
+}
+
+.mar-top-1 {
+  margin-top: 5px;
+}
+
+.mar-left-1 {
+  margin-left: 5px;
+}
+
+.mar-right-1 {
+  margin-right: 5px;
+}
+
+.mar-x-1 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.mar-y-1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.pad-bot-2 {
+  padding-bottom: 10px;
+}
+
+.pad-top-2 {
+  padding-top: 10px;
+}
+
+.pad-left-2 {
+  padding-left: 10px;
+}
+
+.pad-right-2 {
+  padding-right: 10px;
+}
+
+.pad-x-2 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.pad-y-2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mar-bot-2 {
+  margin-bottom: 10px;
+}
+
+.mar-top-2 {
+  margin-top: 10px;
+}
+
+.mar-left-2 {
+  margin-left: 10px;
+}
+
+.mar-right-2 {
+  margin-right: 10px;
+}
+
+.mar-x-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mar-y-2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pad-bot-3 {
+  padding-bottom: 15px;
+}
+
+.pad-top-3 {
+  padding-top: 15px;
+}
+
+.pad-left-3 {
+  padding-left: 15px;
+}
+
+.pad-right-3 {
+  padding-right: 15px;
+}
+
+.pad-x-3 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pad-y-3 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.mar-bot-3 {
+  margin-bottom: 15px;
+}
+
+.mar-top-3 {
+  margin-top: 15px;
+}
+
+.mar-left-3 {
+  margin-left: 15px;
+}
+
+.mar-right-3 {
+  margin-right: 15px;
+}
+
+.mar-x-3 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.mar-y-3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.pad-bot-4 {
+  padding-bottom: 20px;
+}
+
+.pad-top-4 {
+  padding-top: 20px;
+}
+
+.pad-left-4 {
+  padding-left: 20px;
+}
+
+.pad-right-4 {
+  padding-right: 20px;
+}
+
+.pad-x-4 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.pad-y-4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.mar-bot-4 {
+  margin-bottom: 20px;
+}
+
+.mar-top-4 {
+  margin-top: 20px;
+}
+
+.mar-left-4 {
+  margin-left: 20px;
+}
+
+.mar-right-4 {
+  margin-right: 20px;
+}
+
+.mar-x-4 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mar-y-4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pad-bot-5 {
+  padding-bottom: 25px;
+}
+
+.pad-top-5 {
+  padding-top: 25px;
+}
+
+.pad-left-5 {
+  padding-left: 25px;
+}
+
+.pad-right-5 {
+  padding-right: 25px;
+}
+
+.pad-x-5 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.pad-y-5 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.mar-bot-5 {
+  margin-bottom: 25px;
+}
+
+.mar-top-5 {
+  margin-top: 25px;
+}
+
+.mar-left-5 {
+  margin-left: 25px;
+}
+
+.mar-right-5 {
+  margin-right: 25px;
+}
+
+.mar-x-5 {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.mar-y-5 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
 
 /* *** PROFILE *** */
 .profInfo {
@@ -261,8 +517,8 @@ h1,h2, h3, h4, h5, h6 {
 }
 
 /* Controlls background image once user logged in */
-.body{
-  background-image:url("IMG/backgroundImage.png");
+.body {
+  background-image: url("IMG/backgroundImage.png");
   opacity: 0.5;
   font-family: Arial;
   /* margin: horizontal centering */
@@ -287,7 +543,7 @@ h1,h2, h3, h4, h5, h6 {
   margin: 10px;
   text-align: center;
   background: white;
-  
+
   color: black;
   font-size: 30px;
   /* sizing of corners */
@@ -302,24 +558,31 @@ div.header {
   background-color: rgba(255, 255, 255, 0.6);
   border: 2px solid black;
 }
+
 /* changing font attributes */
 div.header p {
   margin: 5%;
   font-weight: bold;
   color: #000000;
 }
+
 div.header h1 {
   margin: 5%;
   font-weight: bold;
   color: #000000;
 }
 
+/* Complaint History */
+.OldCompHistory {}
+
+.Boxes {}
+
 /* logging complaint button */
-.logComplaint{
+.logComplaint {
   position: sticky;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   flex: 33.3%;
   background-color: transparent;
   outline: none;
@@ -337,24 +600,23 @@ div.header h1 {
 
   background-color: red;
 }
+
 .logComplaint:hover {
   background-color: #a2b9ff;
 }
 
 /* COMPLAINT SCREEN */
-.header .form {
-  
-}
+.header .form {}
 
 /* Viewing assigned support persons info */
 /* controls button in class */
-button.supportPersonsInfo{
+button.supportPersonsInfo {
   position: sticky;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   flex: 33.3%;
-  
+
   border: 2px solid rgb(46, 46, 46);
   border-radius: 0.5rem;
   cursor: pointer;
@@ -369,6 +631,7 @@ button.supportPersonsInfo{
   width: 50%;
   margin-top: 1%;
 }
+
 .supportPersonsInfo:hover {
   background-color: #a2b9ff;
   border: 2px solid transparent;
@@ -376,9 +639,9 @@ button.supportPersonsInfo{
 }
 
 /* Viewing complaint log progress/ status */
-button.complaintStatus{
+button.complaintStatus {
   margin: 0;
-    
+
   position: sticky;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
@@ -401,6 +664,7 @@ button.complaintStatus{
   width: 50%;
   margin-top: 2%;
 }
+
 .complaintStatus:hover {
   background-color: #a2b9ff;
   border: 2px solid black;
@@ -408,7 +672,7 @@ button.complaintStatus{
 }
 
 /* Making changes to group of dashboard buttons */
-.userDashboardButtons{
+.userDashboardButtons {
   display: flex;
   flex-wrap: wrap;
   flex: 100%;
@@ -419,11 +683,11 @@ button.complaintStatus{
 }
 
 /* Changing individual buttons in their divs */
-.userDashboardButtons div{
+.userDashboardButtons div {
   background-color: #f1f1f1;
   border: 2px solid black;
   border-radius: 1rem;
-  color:#000;
+  color: #000;
   width: 100px;
   margin: 10px;
   padding: 10px;
@@ -435,92 +699,283 @@ button.complaintStatus{
 @keyframes glowing {
   0% {
     background-position: 0 0;
-  } 50% {
+  }
+
+  50% {
     background-position: 400% 0;
-  }100% {
+  }
+
+  100% {
     background-position: 0 0;
   }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .example {background: red;}
+  .example {
+    background: red;
+  }
+
+  .userDashboardButtons {
+    background-color: lightblue;
+  }
+
+  .OldCompHistory {
+    width: fit-content;
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    margin: auto;
+  }
+
+  .OldCompHistoryBoxes {
+    background-color: #f1f1f1;
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+
+    margin: 10px;
+    margin: auto;
+    border: 2px solid black;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .example {background: green;}
+  .example {
+    background: green;
+  }
 
+  .userDashboardButtons {
+    background-color: lightgreen;
+  }
+
+  .OldCompHistory {
+    width: fit-content;
+    background-color: lightgreen;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .OldCompHistoryBoxes {
+    background-color: #f1f1f1;
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+
+    margin: 10px;
+    margin: auto;
+    border: 2px solid black;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .example {background: blue;}
-} 
+  .example {
+    background: blue;
+  }
+
+  .userDashboardButtons {
+    background-color: lightpink;
+  }
+
+  .OldCompHistory {
+    width: fit-content;
+    background-color: lightpink;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .OldCompHistoryBoxes {
+    background-color: #f1f1f1;
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+
+    margin: 10px;
+    margin: auto;
+    border: 2px solid black;
+  }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .example {background: orange;}
-  button.logComplaint{
-  position: sticky;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); 
-  margin: 10px;
-  width: 50%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: 50%;
-}
+  .example {
+    background: orange;
+  }
 
-button.supportPersonsInfo{
-  position: sticky;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 10px;
-  margin-left: 50%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
+  button.logComplaint {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 10px;
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 50%;
+  }
 
-button.complaintStatus{
-  position: sticky;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 10px;
-  margin-left: 50%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
+  .OldCompHistory {
+    width: fit-content;
+    background-color: lightyellow;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+  }
 
-.userDashboardButtons{
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 2px solid black;
-  text-align: center;
-  margin: auto;
-}
+  .OldCompHistoryBoxes {
+    background-color: #f1f1f1;
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
 
-.userDashboardButtons div{
-  background-color: #f1f1f1;
-  color:#000;
-  width: 100px;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  font-size: 30px;
+    margin: 10px;
+    margin: auto;
+    border: 2px solid black;
+  }
+
+  button.supportPersonsInfo {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 10px;
+    margin-left: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  button.complaintStatus {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 10px;
+    margin-left: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .userDashboardButtons {
+    display: flex;
+    flex-direction: row;
+    background-color: lightyellow;
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+  }
+
+  .userDashboardButtons div {
+    background-color: #f1f1f1;
+    color: #000;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+  }
 }
-} 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .example {background: pink;}
-  
-}
+  .example {
+    background: pink;
+  }
 
+  button.logComplaint {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 10px;
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 50%;
+  }
+
+  .OldCompHistory {
+    width: fit-content;
+    background-color: lightyellow;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .OldCompHistoryBoxes {
+    background-color: #f1f1f1;
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+
+    margin: 10px;
+    margin: auto;
+    border: 2px solid black;
+  }
+
+  button.supportPersonsInfo {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 10px;
+    margin-left: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  button.complaintStatus {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 10px;
+    margin-left: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .userDashboardButtons {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+  }
+
+  .userDashboardButtons div {
+    background-color: #f1f1f1;
+    color: #000;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+  }
+}

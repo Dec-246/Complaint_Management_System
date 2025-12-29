@@ -48,19 +48,7 @@ if ($activation_code !== 'activated') {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- mobile phones -->
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../CSS/global.css">
-
-    <!-- tablets/ large phones -->
-    <link rel="stylesheet" media="screen and (min-width: 600px)" href="../../CSS/global.css">
-
-    <!-- landscape tablets -->
-    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../../CSS/global.css">
-
-    <!-- laptops/ desktops -->
-    <link rel="stylesheet" media="screen and (min-width: 992px)" href="../../CSS/global.css">
-
-    <!-- large laptops/ desktops -->
-    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="../../CSS/global.css">
+    <link rel="stylesheet"  href="../../CSS/global.css"> 
 
     <title>Home Screen</title>
 </head>
@@ -69,7 +57,7 @@ if ($activation_code !== 'activated') {
     <?php include '../Includes/navbar.php'; ?>
     <style>
         body {
-            background-image: url("IMG/backgroundImage.png");
+            background-image: url("../../IMG/backgroundImage.png");
         }
     </style>
 
@@ -83,63 +71,63 @@ if ($activation_code !== 'activated') {
 
 
     <!-- controls the full red box -->
-    <div class="userDashboardButtons">
+    <div class="OldCompHistory">
 
         <?php foreach ($complaints as $c): ?>
 
 
             <!-- controls the white box/ space -->
-            <div class="profInfo">
+            <div class="OldCompHistory1">
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Complaint reference number:</strong><br>
                     <?= htmlspecialchars($c['complaint_id']) ?>
-                </div>
+                </div><br>
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Complaint name:</strong><Br>
                     <?= htmlspecialchars($c['name']) ?>
-                </div>
+                </div><br>
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Description:</strong><br>
                     <?= htmlspecialchars($c['description']) ?>
-                </div>
+                </div><br>
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Last Updated:</strong><br>
                     <?= htmlspecialchars($c['update_time']) ?>
-                </div>
+                </div><br>
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Status Type:</strong><br>
                     <?= htmlspecialchars($c['status_type']) ?>
-                </div>
+                </div><br>
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Complaint Type:</strong><br>
                     <?= htmlspecialchars($c['complaint_type_name']) ?>
-                </div>
+                </div><br>
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Estimated resolution times:</strong><br>
                     <?= htmlspecialchars($c['complaint_estimated_res_time']) ?> <p> Days</p>
-                </div>
+                </div><br>
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Customer Name:</strong><br>
                     <?= htmlspecialchars($c['customer_name']) ?>
-                </div>
+                </div><br>
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Agent Name:</strong><br>
                     <?= htmlspecialchars($c['staff_name'] ?? "Not assigned") ?>
-                </div>
+                </div><br>
 
-                <div class="profInfo">
+                <div class="OldCompHistoryBoxes">
                     <strong>Is issue solved:</strong><br>
                     <?= $c['is_solved'] ? "Yes" : "No" ?>
-                </div>
+                </div><br>
 
                 <form action="changeSolveStatusProcess.php" method="post" class="profInfo">
                     <input type="hidden" name="complaint_id" value="<?= $c['complaint_id'] ?>">
@@ -155,7 +143,7 @@ if ($activation_code !== 'activated') {
                     </div><br>
                     <button class="btn blue" type="submit">Update Solve Status</button>
 
-                </form>
+                </form><br>
 
                 <p>-------------------------------------------------------------------------------------------------------------</p>
 
