@@ -4,7 +4,7 @@
 
 {Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
 
-For my proof-of-concept, I need to decide what technology stack and tools I am going to use. I need to consider my options and make a decision based the most ideal approach in terms of the languages and tools i can use with those languages. 
+For my proof-of-concept, I need to decide what technology stack and tools I am going to use. I need to consider my options and make a decision based on the most ideal approach in terms of the languages and tools I can use with those languages.
 
 ## Considered Options
 
@@ -30,5 +30,14 @@ For the authentication process, I am deciding to use a service called MailHog. T
 ### Consequences
 
 * Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
+* Simple, straighforward, user friendly
+* can be used together with further security
+* OTP can be implemented at a later time
+* fits nicely with system
+* improves security, safety, human authentication
+
+
+
 * Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
+* 
 * … <!-- numbers of consequences can vary -->
