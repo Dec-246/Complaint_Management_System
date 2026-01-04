@@ -4,20 +4,25 @@
 
 {Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
 
-For my proof-of-concept, I need to decide what technology stack and tools I am going to use. I need to consider my options and make a decision based on the most ideal approach in terms of the languages and tools I can use with those languages.
+For my proof-of-concept, I need to decide what technology stack and tools I am going to use. I need to consider my options and make a decision based on the most ideal approach in terms of the languages and tools I can use with those languages. This decision is important as it can either benefit (drastically improve user experience) or disadvantage my system (some languages are harder to use for implementing certain features).
 
 ## Considered Options
 
-* {PHP - Normal password/ username - using MailHog for verifying email | quite easy to implement, has good documentation}
+*1. {PHP - Standard Login with account authorisation (using email)  - using MailHog for verifying email | quite easy to implement, has good documentation}
 
-* {Python | Django/ Twilio - Send OTP to use for login | can be complicated to adjust to for first time use & for website use.}
+*2. {Python | Django/ Twilio - Send OTP to use for login (2fa) | can be complicated to adjust to language for first time use & for website use.}
 
-* {Laravel - Session tokens | can take long time to set up and understand. Lecturer (Martin) advised not to implement so soon to deadline as it could be a risk to submitting late.}
+*3. {Laravel - Session tokens | can take long time to set up and understand. Lecturer (Martin Cooper) advised not to implement so soon to deadline as it could be a risk to submitting late.}
+
 * … <!-- numbers of options can vary -->
 
 ## Decision Outcome
 
 Chosen option: "{title of option 1}", because {justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
+
+
+Chosen option: "Standard Login with account authorisation (using email)", because I am already most familiar with using PHP. Therefore, this would not take me long to implement into my system. Using an alternative, less familiar language would likely take me longer and delay my assignment submission. Moreover, this option is the best fit for me.
+
 
 For the frontend of my application I am going to use HTML for the structure (content) as well as using CSS for styling.
 
