@@ -1,14 +1,16 @@
 # {Chosen Technology stack}
 
-## Deciding what technology stacks to use for proof-of-concept
+## Deciding what technology stack to use for proof-of-concept
 
 {Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
 
-For my proof-of-concept, I need to decide what technology stack and tools I am going to use. I need to consider my options and make a decision based on the most ideal approach in terms of the languages and tools I can use with those languages. This decision is important as it can either benefit (drastically improve user experience) or disadvantage my system (some languages are harder to use for implementing certain features).
+For my proof-of-concept application, I need to identify what technology stack and tools I am going to use to create the system. The chosen tech stack needs to be ideally familiar and fairly easy to use, yet widely extensible so that appropriate features can be implemented in the future.
+
+
 
 ## Considered Options
 
-*1. {PHP - Standard Login with account authorisation (using email)  - using MailHog for verifying email | quite easy to implement, has good documentation}
+*1. {HTML/ CSS (frontend), PHP (backend), MySQL (database), Server (Apache), }
 
 *2. {Python | Django/ Twilio - Send OTP to use for login (2fa) | can be complicated to adjust to language for first time use & for website use.}
 
