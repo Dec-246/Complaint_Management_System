@@ -40,13 +40,10 @@ if ($activation_code !== 'activated') {
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- mobile phones -->
     <link rel="stylesheet" href="CSS/global.css">
-
-
     <title>Home Screen</title>
 </head>
 
@@ -63,8 +60,6 @@ if ($activation_code !== 'activated') {
         <p>Everyday beautiful life</p>
 
         <form action="../Backend/complaintProcess.php" method="post" class="form login-form">
-
-
 
             <h1>Log Complaint</h1>
 
@@ -84,7 +79,6 @@ if ($activation_code !== 'activated') {
                 <input class="form-input" type="text" name="description" placeholder="Description" id="Description" required>
             </div><br>
 
-
             <label>Select Complaint Type:</label>
             <div class="form-group">
                 <select class="tenantStyle" name="complaint_type_id" style="text-align: center; margin: auto; width:100%;">
@@ -94,14 +88,8 @@ if ($activation_code !== 'activated') {
                 </select><br>
             </div><br>
 
-
             <button class="btn blue" type="submit">Submit Complaint</button>
-
-            <!-- <p class="register-link">Already have an account? <a href="login.php" class="form-link">Login</a></p> -->
-
         </form>
-
-
     </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -131,5 +119,4 @@ if ($activation_code !== 'activated') {
     </script>
 
 </body>
-
 </html>

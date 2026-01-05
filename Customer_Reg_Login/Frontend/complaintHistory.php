@@ -149,7 +149,6 @@ if ($activation_code !== 'activated') {
         <?php endforeach; ?>
     </div>
 
-
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <script>
@@ -177,5 +176,4 @@ if ($activation_code !== 'activated') {
     </script>
 
 </body>
-
 </html>
