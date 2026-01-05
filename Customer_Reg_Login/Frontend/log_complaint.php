@@ -1,5 +1,5 @@
 <!-- References -->
- <!-- https://www.w3schools.com/tags/tag_select.asp -->
+<!-- https://www.w3schools.com/tags/tag_select.asp -->
 
 <?php
 // including session and db connection in own file
@@ -84,7 +84,7 @@ if ($activation_code !== 'activated') {
                 <input class="form-input" type="text" name="description" placeholder="Description" id="Description" required>
             </div><br>
 
-            
+
             <label>Select Complaint Type:</label>
             <div class="form-group">
                 <select class="tenantStyle" name="complaint_type_id" style="text-align: center; margin: auto; width:100%;">
@@ -104,10 +104,31 @@ if ($activation_code !== 'activated') {
 
     </div>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
 
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
 
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 
 </body>
 

@@ -573,9 +573,6 @@ div.header h1 {
 }
 
 /* Complaint History */
-.OldCompHistory {}
-
-.Boxes {}
 
 /* logging complaint button */
 .logComplaint {
@@ -603,6 +600,29 @@ div.header h1 {
 
 .logComplaint:hover {
   background-color: #a2b9ff;
+}
+
+/* complaint history -- scroll to top */
+
+button#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(143, 143, 143);
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+button#myBtn:hover {
+  background-color: rgba(48, 44, 44, 0.901);
+  color: white;
 }
 
 /* COMPLAINT SCREEN */

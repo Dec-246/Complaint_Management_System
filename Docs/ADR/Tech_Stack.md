@@ -2,9 +2,7 @@
 
 ## Deciding what technology stack to use for proof-of-concept
 
-{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
-
-For my proof-of-concept application, I need to identify what technology stack and tools I am going to use to create the system. The chosen tech stack needs to be ideally familiar and fairly easy to use, yet widely extensible so that appropriate features can be implemented in the future.
+For my proof-of-concept application, I need to identify what technology stack and tools I am going to use to create the system. The chosen tech stack needs to be ideally familiar and fairly easy to use, yet widely extensible so that appropriate features can be implemented in the future. I have chosen to create a website therefore, my chosen tech stack must align with this.
 
 
 
@@ -12,9 +10,9 @@ For my proof-of-concept application, I need to identify what technology stack an
 
 *1. {HTML/ CSS (frontend), PHP (backend), MySQL (database), Server (Apache), }
 
-*2. {Python | Django/ Twilio - Send OTP to use for login (2fa) | can be complicated to adjust to language for first time use & for website use.}
+*2. { }
 
-*3. {Laravel - Session tokens | can take long time to set up and understand. Lecturer (Martin Cooper) advised not to implement so soon to deadline as it could be a risk to submitting late.}
+*3. { }
 
 * … <!-- numbers of options can vary -->
 
