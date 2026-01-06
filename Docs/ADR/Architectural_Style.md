@@ -2,8 +2,6 @@
 
 ## Context and Problem Statement
 
-{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
-
 Before beginning the planning process for my proof-of-concept, I need to choose what architectural style I am going to use to align my project with. This architectural style is an important decision to make as it will set out the structure of my application as well as having a major impact on the overall behaviour of my application; further affecting the performance, maintainability and security of my system.
 
 ## Considered Options
@@ -34,11 +32,10 @@ Chosen option: "Monolith", This is due to how easy and versatile the architectur
 
 ### Consequences
 
-* Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
-  * Easily adaptable
-  * no cost
-  * ideal for my project size
-  * easy to test/ deploy/ release
+Good
 
-* Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
-  * Alternative Architectural style may be needed for real world application - large scale
+* Good, because the outcome of my assignment was successful. I found the workload manageable and the development lifecycle was quite straightforward. The Monolith architectural style provided an easy-to-follow blueprint meaning processes such as testing were seamless.
+
+Bad
+
+* The bad consequence of choosing the Monolith architectural style is that an alternative style such as MicroServices would likely be better for the real world scenario of building a full application which involves banking customers. This is because MicroServices is more scalable and requires a skilled team as opposed to an individual alone.
