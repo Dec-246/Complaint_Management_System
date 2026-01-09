@@ -81,51 +81,51 @@ if ($activation_code !== 'activated') {
 
 
     <!-- controls the full red box -->
-    <div class="userDashboardButtons">
+    <div class="OldCompHistory">
 
         <?php foreach ($complaints as $c): ?>
 
 
             <!-- controls the white box/ space -->
-            <div class="profInfo">
+            <div class="OldCompHistory1">
 
-                <div class="profInfo">
+                <br><div class="OldCompHistoryBoxes">
                     <strong>Complaint reference number:</strong><br>
                     <?= htmlspecialchars($c['complaint_id']) ?>
                 </div>
 
-                <div class="profInfo">
+                <br><div class="OldCompHistoryBoxes">
                     <strong>Complaint name:</strong><Br>
                     <?= htmlspecialchars($c['name']) ?>
                 </div>
 
-                <div class="profInfo">
+                <br><div class="OldCompHistoryBoxes">
                     <strong>Description:</strong><br>
                     <?= htmlspecialchars($c['description']) ?>
                 </div>
 
-                <div class="profInfo">
+                <br><div class="OldCompHistoryBoxes">
                     <strong>Complaint Type:</strong><br>
                     <?= htmlspecialchars($c['complaint_type_name']) ?>
                 </div>
 
-                <div class="profInfo">
+                <br><div class="OldCompHistoryBoxes">
                     <strong>Priority:</strong><br>
                     <?= htmlspecialchars($c['priority']) ?>
                 </div>
 
-                <div class="profInfo">
+                <br><div class="OldCompHistoryBoxes">
                     <strong>Customer Name:</strong><br>
                     <?= htmlspecialchars($c['customer_name']) ?>
                 </div>
 
                 
-                <div class="profInfo">
+                <br><div class="OldCompHistoryBoxes">
                     <strong>Status Type:</strong><br>
                     <?= htmlspecialchars($c['status_type']) ?>
                 </div>
                 
-                <form action="changeStatusProcess.php" method="post" class="profInfo">
+                <br><form action="changeStatusProcess.php" method="post" class="OldCompHistoryBoxes">
                 <input type="hidden" name="complaint_id" value="<?=  $c['complaint_id'] ?>">
                 <label>Change Status:</label>
                 <div class="form-group">
@@ -143,6 +143,31 @@ if ($activation_code !== 'activated') {
         <?php endforeach; ?>
     </div>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 
 </body>
 

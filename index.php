@@ -7,7 +7,7 @@ require 'Customer_Reg_Login/Backend/authenticationRestriction.php';
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- mobile phones -->
+
 <link rel="stylesheet"  href="CSS/global.css"> 
 
 
@@ -43,6 +43,7 @@ require 'Customer_Reg_Login/Backend/authenticationRestriction.php';
 </div><br><br><br><br>
 
 </body>
+<footer> Copyright Declans CMS</footer>
 </html>
 
 

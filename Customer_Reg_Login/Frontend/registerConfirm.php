@@ -26,7 +26,7 @@ require '../../Includes/db.connect.php';
 </head>
 
 <body>
-<style>
+<style alt="Background image for website. This provides a modern, sleek design.">
     body{
         background-image:url("IMG/backgroundImage.png");
     }

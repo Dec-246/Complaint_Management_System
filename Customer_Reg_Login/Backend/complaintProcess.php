@@ -1,5 +1,5 @@
 <!-- References -->
- <!-- https://stackoverflow.com/a/4614159 (using prepared statements) -->
+<!-- https://stackoverflow.com/a/4614159 (using prepared statements) -->
 
 <?php
 require '../../Includes/db.connect.php';
@@ -11,12 +11,10 @@ require '../../Includes/db.connect.php';
 // var_dump($_SESSION);
 // exit;
 
-
 // NOTES
 // -- USE stmt FOR PREPARED STATEMENTS
 // -- USE sql FOR RAW SQL STRINGS
 // -- STMT PREVENTS BUGS, IMPROVES CODE READABILITY, PROFESSIONALITY.
-
 
 // here i am remembering to use trim:
 // - getting rid of user's whitespace
@@ -30,17 +28,20 @@ $complaint_type_id = $_POST['complaint_type_id'];
 // sessions allowing me to keep the customers data active in my web app whilst logged in
 $customer_id = $_SESSION['customer_id'];
 
+// if no user ID found, redirect to login screen.
 if (!$customer_id) {
-  die("Error: No user ID found! You must log in!");
+  // die("Error: No user ID found! You must log in!");
+  header("Location: ../Frontend/login.php");
+  exit;
 }
 
 
 // getting complaint department
-$stmt = $con->prepare("
-SELECT department_id
+$stmt = $con->prepare(
+  "SELECT department_id
 FROM complaint_type
-WHERE id = ?
-");
+WHERE id = ?"
+);
 $stmt->bind_param("i", $complaint_type_id);
 $stmt->execute();
 $stmt->bind_result($department_id);
@@ -56,8 +57,8 @@ $stmt = $con->prepare(
     WHERE is_available = 1
     AND department_id = ?
     ORDER BY RAND()
-    LIMIT 1
-");
+    LIMIT 1"
+);
 $stmt->bind_param("i", $department_id);
 $stmt->execute();
 $stmt->bind_result($staff_id);
@@ -78,11 +79,11 @@ $stmt = $con->prepare(
   complaint_type_id,
   customer_id,
   staff_id)
-  VALUES (?, ?, ?, ?, ?)
-");
+  VALUES (?, ?, ?, ?, ?)"
+);
 $stmt->bind_param("ssiii", $name, $description, $complaint_type_id, $customer_id, $staff_id);
 
-$comp_submitted = $stmt->execute(); 
+$comp_submitted = $stmt->execute();
 $stmt->close();
 
 if ($comp_submitted) {

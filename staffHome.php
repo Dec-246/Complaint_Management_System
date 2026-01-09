@@ -70,16 +70,7 @@ if ($activation_code !== 'activated') {
         <br><a href="viewAssignedComplaints.php" class="supportPersonsInfo">Viewing Assigned Complaints</a><br>
     </div>
 
-    <div class="supportPersonsInfo" style="flex-grow: 1;">
-        <!-- controls the button -->
-        <br><a href="" class="supportPersonsInfo">Log Complaint</a><br>
-    </div>
-
-    <div class="supportPersonsInfo" style="flex-grow: 1;">
-        <!-- controls the button -->
-        <br><a href="" class="supportPersonsInfo">Log Complaint</a><br>
-    </div>
-</div>
+</div><br><br><br><br><br><br><br><br>
 
 
 </body>

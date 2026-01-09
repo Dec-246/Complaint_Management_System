@@ -53,9 +53,7 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM customer_ac
             exit;
         } else {
             // Incorrect password
-
             header ('Location: ../../Includes/wrongCreds.php');
-        
         }
     } else {
         // Incorrect username
