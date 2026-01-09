@@ -38,12 +38,17 @@ Good
 
 Bad
 
-* The bad consequence of choosing the Monolith architectural style is that an alternative style such as MicroServices would likely be better for the real world scenario of building a full application which involves banking customers. This is because MicroServices is more scalable and requires a skilled team as opposed to an individual alone. Therefore, this may be a more appropriate choice for a commercial level application. 
+* The bad consequence of choosing the Monolith architectural style is that an alternative style such as MicroServices would likely be better for the real world scenario of building a full application which involves banking customers. This is because MicroServices is more scalable and requires a skilled team as opposed to an individual alone. Therefore, this may be a more appropriate choice for a commercial level application.
+  
 * However, the Monolith architecture can be scaled into microservices if need be. This is backed by Martin Fowler (Chief Scientist at Thoughtworks), stating that 'monolithic systems become too large to deal with, many enterprises are drawn to breaking them down into the microservices'[1].
-* Moreover, this could additionally be another advantage of my original choice over choosing Monolith due to its flexibility later in the development lifecycle.
+  
+* Moreover, this could additionally be another advantage of my original choice over choosing Monolith due to its (despite being known to be time consuming/ difficult) flexibility later in the development lifecycle.
+* Adding to the flexibility, Harris, C. stated the 'Lack of flexibility' and saying how 'a monolith is constrained by the technologies already used in the monolith'[2]. This strengthens the popular knowledge on the difficulty of managing a Monolith project later on, eventhough it is possible to change, it can be very difficult to do so.
 
 Reference:
 
 [1] How to break a Monolith into Microservices. (2018). Martinfowler.com. https://martinfowler.com/articles/break-monolith-into-microservices.html
+
+‌[2] Harris, C. (2024). Microservices vs. monolithic architecture. Atlassian. https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith
 
 ‌
