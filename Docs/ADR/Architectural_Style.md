@@ -34,8 +34,16 @@ Chosen option: "Monolith", This is due to how easy and versatile the architectur
 
 Good
 
-* Good, because the outcome of my assignment was successful. I found the workload manageable and the development lifecycle was quite straightforward. The Monolith architectural style provided an easy-to-follow blueprint meaning processes such as testing were seamless.
+* Good, because the outcome of my assignment was successful. I found the workload manageable and the development process was quite straightforward. The Monolith architectural style provided an easy-to-follow blueprint meaning processes such as designing, architecting and testing were seamless. The Monolith architectural style made for a very appropriate and fitting style to follow along with, given that I was only to be creating a proof-of-concept instead of a full working system, and that I was a solo developer on this project. Overall, the Monolith approach was a sensible decision which led to the overall success of my system.
 
 Bad
 
-* The bad consequence of choosing the Monolith architectural style is that an alternative style such as MicroServices would likely be better for the real world scenario of building a full application which involves banking customers. This is because MicroServices is more scalable and requires a skilled team as opposed to an individual alone.
+* The bad consequence of choosing the Monolith architectural style is that an alternative style such as MicroServices would likely be better for the real world scenario of building a full application which involves banking customers. This is because MicroServices is more scalable and requires a skilled team as opposed to an individual alone. Therefore, this may be a more appropriate choice for a commercial level application. 
+* However, the Monolith architecture can be scaled into microservices if need be. This is backed by Martin Fowler (Chief Scientist at Thoughtworks), stating that 'monolithic systems become too large to deal with, many enterprises are drawn to breaking them down into the microservices'[1].
+* Moreover, this could additionally be another advantage of my original choice over choosing Monolith due to its flexibility later in the development lifecycle.
+
+Reference:
+
+[1] How to break a Monolith into Microservices. (2018). Martinfowler.com. https://martinfowler.com/articles/break-monolith-into-microservices.html
+
+‌
