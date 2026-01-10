@@ -572,6 +572,42 @@ div.header h1 {
   color: #000000;
 }
 
+
+
+/* Chatbot */
+button#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: solid 2px black;
+  outline: none;
+  background-color: white(143, 143, 143);
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 15px;
+}
+button#chatbot:hover {
+  background-color: rgba(48, 44, 44, 0.901);
+  color: white;
+}
+#chatbotImg{
+  display: block;
+  margin: auto;
+  border: solid 3px black;
+  border-radius: 20px;
+  padding: 5px;
+  width: 500px;
+  height: 600px;
+}
+#chatbotDescription{
+  text-align: center;
+  margin: auto;
+  margin: 100px;
+}
+
 /* Complaint History */
 
 /* logging complaint button */
@@ -604,23 +640,23 @@ div.header h1 {
 
 /* complaint history -- scroll to top */
 
-button#myBtn {
+button#returnTop {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 99;
   font-size: 18px;
-  border: none;
+  border: solid 2px black;;
   outline: none;
-  background-color: rgb(143, 143, 143);
+  background-color: white;
   color: black;
   cursor: pointer;
   padding: 10px;
   border-radius: 15px;
 }
 
-button#myBtn:hover {
+button#returnTop:hover {
   background-color: rgba(48, 44, 44, 0.901);
   color: white;
 }
@@ -762,6 +798,22 @@ button.complaintStatus {
     margin: auto;
     border: 2px solid black;
   }
+
+  /* Chatbot > image */
+  #chatbotImg{
+  display: block;
+  margin: auto;
+  border: solid 3px black;
+  border-radius: 20px;
+  padding: 5px;
+  width: 250px;
+  height: 300px;
+}
+#chatbotDescription{
+  text-align: center;
+  margin: auto;
+  margin: 30px;
+}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
