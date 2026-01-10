@@ -41,10 +41,10 @@ if ($activation_code !== 'activated') {
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" interactive-widget=resizes-content>
     <!-- mobile phones -->
     <link rel="stylesheet" href="CSS/global.css">
-    <title>Home Screen</title>
+    <title>Log complaint</title>
 </head>
 
 <body>
@@ -92,11 +92,11 @@ if ($activation_code !== 'activated') {
         </form>
     </div>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="returnTop" title="Go to top">Top</button>
 
     <script>
         // Get the button
-        let mybutton = document.getElementById("myBtn");
+        let mybutton = document.getElementById("returnTop");
 
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {

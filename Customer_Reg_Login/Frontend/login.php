@@ -20,7 +20,7 @@ if (isset($_SESSION['account_loggedIn'])) {
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1" interactive-widget=resizes-content>
     <link href="../../CSS/global.css" rel="stylesheet" type="text/css">
     <title>Customer Login</title>
 </head>

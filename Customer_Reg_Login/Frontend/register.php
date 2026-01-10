@@ -1,6 +1,7 @@
 <?php 
 ini_set('display_errors', 0);
 require '../../Includes/db.connect.php';
+require '../Backend/registerProcess.php';
 
 //redirect user to home page if user logged in
 if (isset($_SESSION['account_loggedIn'])) {
@@ -14,15 +15,13 @@ header('Location: ../../index.php');
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, minimum-scale=1">
+        <meta name="viewport" content="width=device-width, minimum-scale=1" interactive-widget=resizes-content>
         <link href="../../CSS/global.css" rel="stylesheet" type="text/css">
         <title>Register</title>
     </head>
     <body>
         <div class="login"></div>
 
-            
-    
             <form action="../Backend/registerProcess.php" method="post" class="form login-form">
             
             <?php
@@ -77,10 +76,9 @@ header('Location: ../../index.php');
                 </select><br>
             </div><br>
 
-        
             <button class="btn blue" type="submit">Register</button>
                 
-            <p class="register-link">Already have an account? <a href="login.php" class="form-link">Login</a></p>
+            <p role="login screen link" class="register-link">Already have an account? <a href="login.php" class="form-link">Login</a></p>
                 
             </form>
 

@@ -14,7 +14,7 @@ header("Location: staffHome.php");
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, minimum-scale=1">
+        <meta name="viewport" content="width=device-width, minimum-scale=1" interactive-widget=resizes-content>
         <link href="CSS/global.css" rel="stylesheet" type="text/css">
         <title>Register</title>
     </head>
