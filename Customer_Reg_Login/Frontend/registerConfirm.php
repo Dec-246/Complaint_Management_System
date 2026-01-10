@@ -11,18 +11,18 @@ require '../../Includes/db.connect.php';
 <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../CSS/global.css"> 
 
     <!-- tablets/ large phones -->
-<link rel="stylesheet" media="screen and (min-width: 600px)" href="../../CSS/global.css">
+<!-- <link rel="stylesheet" media="screen and (min-width: 600px)" href="../../CSS/global.css"> -->
 
     <!-- landscape tablets -->
-<link rel="stylesheet" media="screen and (min-width: 768px)" href="../../CSS/global.css">
+<!-- <link rel="stylesheet" media="screen and (min-width: 768px)" href="../../CSS/global.css"> -->
     
 <!-- laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 992px)" href="../../CSS/global.css">
+<!-- <link rel="stylesheet" media="screen and (min-width: 992px)" href="../../CSS/global.css"> -->
 
 <!-- large laptops/ desktops -->
-<link rel="stylesheet" media="screen and (min-width: 1200px)" href="../../CSS/global.css">
+<!-- <link rel="stylesheet" media="screen and (min-width: 1200px)" href="../../CSS/global.css"> -->
 
-<title>Home Screen</title>
+<title>Register Confirm</title>
 </head>
 
 <body>
@@ -31,9 +31,6 @@ require '../../Includes/db.connect.php';
         background-image:url("IMG/backgroundImage.png");
     }
 </style>
-
-
-
 
 <?php
 
@@ -45,7 +42,6 @@ if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['emai
     echo "</div>";
 }
 ?>
-
 
 </body>
 </html>

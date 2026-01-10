@@ -2,9 +2,9 @@
 // including session and db connection in own file
 
 //relocates to home page
-require 'Customer_Reg_Login/Backend/authoriseUser.php';
+require 'authoriseUser.php';
 // allows us to use user data (tenant name)
-require 'Customer_Reg_Login/Backend/profileProcess.php';
+require 'profileProcess.php';
 
 // If user not logged in, redirect to login page
 if (!isset($_SESSION['account_loggedIn'])) {

@@ -42,7 +42,7 @@ if ($activation_code !== 'activated') {
 <link rel="stylesheet"  href="CSS/global.css"> 
 
 
-<title>Home Screen</title>
+<title>Staff Home Screen</title>
 </head>
 
 <body>
