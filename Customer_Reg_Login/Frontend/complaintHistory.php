@@ -149,11 +149,11 @@ if ($activation_code !== 'activated') {
         <?php endforeach; ?>
     </div>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="returnTop" title="Go to top">Top</button>
 
     <script>
         // Get the button
-        let mybutton = document.getElementById("myBtn");
+        let mybutton = document.getElementById("returnTop");
 
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {

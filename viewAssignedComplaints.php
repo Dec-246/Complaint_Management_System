@@ -61,7 +61,7 @@ if ($activation_code !== 'activated') {
     <!-- large laptops/ desktops -->
     <link rel="stylesheet" media="screen and (min-width: 1200px)" href="CSS/global.css">
 
-    <title>Home Screen</title>
+    <title>Assigned Complaints</title>
 </head>
 
 <body>
@@ -143,11 +143,11 @@ if ($activation_code !== 'activated') {
         <?php endforeach; ?>
     </div>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="returnTop" title="Go to top">Top</button>
 
     <script>
         // Get the button
-        let mybutton = document.getElementById("myBtn");
+        let mybutton = document.getElementById("returnTop");
 
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {
