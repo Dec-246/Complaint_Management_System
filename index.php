@@ -42,6 +42,14 @@ require 'Customer_Reg_Login/Backend/authenticationRestriction.php';
     </div>
 </div><br><br><br><br>
 
+<button onclick="myFunction()" id="chatbot">Chatbot</button>
+
+<script>
+function myFunction() {
+  location.replace("Customer_Reg_Login/Frontend/chatbot.php")
+}
+</script>
+
 </body>
 <footer> Copyright Declans CMS</footer>
 </html>
