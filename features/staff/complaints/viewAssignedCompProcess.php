@@ -10,12 +10,16 @@ $stmt = $con->prepare(
     complaint.id AS complaint_id, 
     complaint.name, 
     complaint.description,
+    complaint.is_solved AS is_complaint_solved, 
+
     -- complaint_type table
     complaint_type.name AS complaint_type_name, 
     complaint_type.department_id AS complaint_department,
     complaint_type.priority AS priority,
+
     -- customer_accounts table
     customer_accounts.username AS customer_name,
+
     -- status table
     status.type AS status_type
 
@@ -40,7 +44,7 @@ $stmt = $con->prepare(
 // using account ID to get account info
 $stmt->bind_param('i', $_SESSION['account_id']);
 $stmt->execute();
-$stmt->bind_result($complaint_id, $name, $description, $complaint_type_name, $complaint_department, $priority, $customer_name, $status_type);
+$stmt->bind_result($complaint_id, $name, $description, $is_complaint_solved, $complaint_type_name, $complaint_department, $priority, $customer_name, $status_type);
 $result = $stmt->get_result();
 
 $complaints = $result->fetch_all(MYSQLI_ASSOC);

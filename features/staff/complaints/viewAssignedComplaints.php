@@ -5,7 +5,6 @@ require '../../../core/database/db.connect.php';
 require '../../../core/auth/staff/authoriseUser.php';
 // allows us to use user data (tenant name)
 require 'viewAssignedCompProcess.php';
-//require '../../Backend/profileProcess.php';
 
 // If user not logged in, redirect to login page
 if (!isset($_SESSION['account_loggedIn'])) {
@@ -36,14 +35,10 @@ if ($activation_code !== 'activated') {
     echo 'not activated';
     exit;
 }
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- mobile phones -->
@@ -78,66 +73,73 @@ if ($activation_code !== 'activated') {
         <h2>Welcome back <?= htmlspecialchars($_SESSION['username'], ENT_QUOTES) ?></h2>
     </div>
 
-
-
-    <!-- controls the full red box -->
     <div class="OldCompHistory">
-
         <?php foreach ($complaints as $c): ?>
-
 
             <!-- controls the white box/ space -->
             <div class="OldCompHistory1">
 
-                <br><div class="OldCompHistoryBoxes">
+                <br>
+                <div class="OldCompHistoryBoxes">
                     <strong>Complaint reference number:</strong><br>
                     <?= htmlspecialchars($c['complaint_id']) ?>
                 </div>
 
-                <br><div class="OldCompHistoryBoxes">
+                <br>
+                <div class="OldCompHistoryBoxes">
                     <strong>Complaint name:</strong><Br>
                     <?= htmlspecialchars($c['name']) ?>
                 </div>
 
-                <br><div class="OldCompHistoryBoxes">
+                <br>
+                <div class="OldCompHistoryBoxes">
                     <strong>Description:</strong><br>
                     <?= htmlspecialchars($c['description']) ?>
                 </div>
 
-                <br><div class="OldCompHistoryBoxes">
+                <br>
+                <div class="OldCompHistoryBoxes">
                     <strong>Complaint Type:</strong><br>
                     <?= htmlspecialchars($c['complaint_type_name']) ?>
                 </div>
 
-                <br><div class="OldCompHistoryBoxes">
+                <br>
+                <div class="OldCompHistoryBoxes">
                     <strong>Priority:</strong><br>
                     <?= htmlspecialchars($c['priority']) ?>
                 </div>
 
-                <br><div class="OldCompHistoryBoxes">
+                <br>
+                <div class="OldCompHistoryBoxes">
                     <strong>Customer Name:</strong><br>
                     <?= htmlspecialchars($c['customer_name']) ?>
                 </div>
 
-                
-                <br><div class="OldCompHistoryBoxes">
+                <br>
+                <div class="OldCompHistoryBoxes">
+                    <strong>(Customer confirmation:) Is the complaint solved:</strong><br>
+                    <?= htmlspecialchars($c['is_complaint_solved'] == 2 ? "Yes" : "No") ?>
+                </div>
+
+                <br>
+                <div class="OldCompHistoryBoxes">
                     <strong>Status Type:</strong><br>
                     <?= htmlspecialchars($c['status_type']) ?>
                 </div>
-                
-                <br><form action="changeStatusProcess.php" method="post" class="OldCompHistoryBoxes">
-                <input type="hidden" name="complaint_id" value="<?=  $c['complaint_id'] ?>">
-                <label>Change Status:</label>
-                <div class="form-group">
-                    <select class="tenantStyle" name="status_id" style="text-align: center; margin: auto; width:100%;">
-                        <?php require 'statusTypeInfo.php'; ?>
-                    </select><br>
-                </div><br>
-                <button class="btn blue" type="submit">Update Status</button>
+
+                <br>
+                <form action="changeStatusProcess.php" method="post" class="OldCompHistoryBoxes">
+                    <input type="hidden" name="complaint_id" value="<?= $c['complaint_id'] ?>">
+                    <label>Change Status:</label>
+                    <div class="form-group">
+                        <select class="tenantStyle" name="status_id" style="text-align: center; margin: auto; width:100%;">
+                            <?php require 'statusTypeInfo.php'; ?>
+                        </select><br>
+                    </div><br>
+                    <button class="btn blue" type="submit">Update Status</button>
 
                 </form>
                 <p>-------------------------------------------------------------------------------------------------------------</p>
-
             </div>
 
         <?php endforeach; ?>
@@ -170,5 +172,4 @@ if ($activation_code !== 'activated') {
     </script>
 
 </body>
-
 </html>
