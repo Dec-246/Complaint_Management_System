@@ -7,7 +7,6 @@ require '../../../core/auth/customer/authoriseUser.php';
 require 'complaintHistoryProcess.php';
 require '../profile/profileProcess.php';
 
-
 // If user not logged in, redirect to login page
 if (!isset($_SESSION['account_loggedIn'])) {
     header('Location: ../authentication/login.php');
@@ -41,7 +40,6 @@ if ($activation_code !== 'activated') {
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- mobile phones -->
@@ -121,7 +119,7 @@ if ($activation_code !== 'activated') {
 
                 <div class="OldCompHistoryBoxes">
                     <strong>Is issue solved:</strong><br>
-                    <?= $c['is_solved'] ? "Yes" : "No" ?>
+                    <?= htmlspecialchars($c['is_complaint_solved'] == 2 ? "Yes" : "No") ?>
                 </div><br>
 
                 <form action="changeSolveStatusProcess.php" method="post" class="profInfo">
@@ -140,11 +138,9 @@ if ($activation_code !== 'activated') {
                     </div><br>
 
                     <button class="btn blue" type="submit">Update Solve Status</button>
-
                 </form><br>
 
                 <p>-------------------------------------------------------------------------------------------------------------</p>
-
             </div>
 
         <?php endforeach; ?>
@@ -177,4 +173,6 @@ if ($activation_code !== 'activated') {
     </script>
 
 </body>
+<footer> Copyright Declans CMS </footer>
+
 </html>
