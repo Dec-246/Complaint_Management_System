@@ -1,0 +1,45 @@
+/* .logComplaint{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    margin: 10px;
+}
+
+.supportPersonsInfo{
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 10px;
+}
+
+.complaintStatus{
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 10px;
+}
+
+.userDashboardButtons{
+    display: flex;
+    background-color: red;
+    text-align: center;
+}
+
+.userDashboardButtons div{
+    background-color: #f1f1f1;
+  color:#000;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+} */
