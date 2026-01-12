@@ -51,7 +51,7 @@ function myFunction() {
 </script>
 
 </body>
-<footer> Copyright Declans CMS</footer>
+<footer> Copyright Declans CMS </footer>
 </html>
 
 

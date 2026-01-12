@@ -5,15 +5,10 @@ require '../../../core/database/db.connect.php';
 // var_dump($_SESSION);
 // exit;
 
-// // check if the form has been submitted
-// if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
-//     exit('Please complete the registration form!');
-// }
-
-$status_id = $_POST['status_id'];
-$complaint_id = $_POST['complaint_id'];
 // getting customer ID from login (authenticate.php) to set customer id in DB
 $account_id = $_SESSION['account_id'];
+$status_id = $_POST['status_id'];
+$complaint_id = $_POST['complaint_id'];
 
 if (!$account_id) {
     die("Error: No user ID found! You must log in!");
