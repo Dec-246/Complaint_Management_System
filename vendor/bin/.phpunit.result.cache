@@ -1,1 +1,1 @@
-{"version":2,"defects":[],"times":{"complaintLogTest::testTrueIsTrue":0.015}}
+{"version":2,"defects":[],"times":{"complaintLogTest::testTrueIsTrue":0.015,"ComplaintLogTest::testComplaintLoggingPrep":0.027}}
