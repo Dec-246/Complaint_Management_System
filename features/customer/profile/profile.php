@@ -17,7 +17,7 @@ require 'profileProcess.php';
 </head>
 
 <body>
-    <?php include '../Includes/navbar.php';?>
+    <?php include '../../../core/layout/customer/navbar.php';?>
 <style>
     body{
         background-image:url("../../../public/assets/IMG/backgroundImage.png");

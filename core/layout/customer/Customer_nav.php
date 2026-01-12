@@ -8,9 +8,9 @@
 
 <nav class="menu">
     <ul>
-        <li><i class="fa fa-home" ></i><a href="../../../public/index.php"> Home </a></li>
-        <li><i class="fa fa-user-circle"></i><a href="../../../features/customer/profile/profile.php"> Profile </a></li>
-        <li><i class="fa fa-sign-out"></i><a href="../../../features/customer/authentication/logout.php"> Logout </a>
+        <li><i class="fa fa-home" ></i><a href="index.php"> Home </a></li>
+        <li><i class="fa fa-user-circle"></i><a href="../features/customer/profile/profile.php"> Profile </a></li>
+        <li><i class="fa fa-sign-out"></i><a href="../features/customer/authentication/logout.php"> Logout </a>
 </li>
         
         
