@@ -31,8 +31,6 @@ class RegisterValidation
     }
 }
 
-
-
 class RegisterValidationTest extends TestCase
 {
     public function testEmailValidation()
@@ -68,7 +66,6 @@ class RegisterValidationTest extends TestCase
         $this->assertArrayHasKey('username', $errors);
     }
 
-
     public function testPasswordValidation()
     {
         //Arrange
@@ -102,4 +99,4 @@ class RegisterValidationTest extends TestCase
     }
 } 
 // To Run test
-// php vendor\bin\phpunit tests/RegisterValidationTest.php
+// php vendor\bin\phpunit tests/unit/RegisterValidationTest.php

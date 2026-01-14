@@ -56,5 +56,5 @@ class ComplaintLogTest extends TestCase
 }
 
 // To Run test
-// php vendor\bin\phpunit tests/ComplaintLogTest.php
+// php vendor\bin\phpunit tests/unit/ComplaintLogTest.php
 
