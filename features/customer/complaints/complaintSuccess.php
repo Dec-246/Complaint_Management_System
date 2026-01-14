@@ -36,7 +36,7 @@ require '../../../core/database/db.connect.php';
     <h1>Success!</h1>
 
     <P>New record created successfully"</P><br>
-    <p class="register-link">To go back home click <a href="../../../public/index.php" class="form-link">here</a></p>
+    <p class="register-link">To go back home click <a href="../dashboard/index.php" class="form-link">here</a></p>
 
 </div>
 

@@ -10,7 +10,7 @@ require '../../../core/database/db.connect.php';
 //redirect user to home page if user logged in
 if (isset($_SESSION['account_loggedIn'])) {
     //setting redirectory to staff home page
-    header('Location: ../../../public/index.php');
+    header('Location: ../dashboard/index.php');
     exit;
 }
 ?>

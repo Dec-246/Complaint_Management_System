@@ -6,7 +6,6 @@ if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
     exit('Please complete the registration form!');
 }
 
-
 // --------------------------------------------
 // For the validation, I have created a switch case in the register.php file which refers to the error codes below 
 // -------- VALIDATION -----------------
@@ -59,7 +58,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM customer_accounts WHERE user
 
         // Declare variables
         $registered = date('Y-m-d H:i:s');
-        // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in
+        // Hashing the password and use password_verify when a user logs in
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $tenant_id = $_POST['tenant_id'];
 
@@ -72,9 +71,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM customer_accounts WHERE user
 
             // Bind POST data to the prepared statement
             $stmt->bind_param('ssssss', $_POST['username'], $password, $_POST['email'], $registered, $uniqid, $tenant_id);
-
             $stmt->execute();
-
 
             // Sending email to user- Format for email 
             // From email address
@@ -111,4 +108,3 @@ if ($stmt = $con->prepare('SELECT id, password FROM customer_accounts WHERE user
 // Closing connection here
 $con->close();
 
-// header("Location: registerConfirm.php");

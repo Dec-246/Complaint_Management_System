@@ -49,7 +49,7 @@ if ($stmt = $con->prepare('SELECT id, password, activation_code FROM customer_ac
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['customer_id'] = $id;
             // Output success message
-            header('Location: ../../../public/index.php');
+            header('Location: ../dashboard/index.php');
             exit;
         } else {
             // Incorrect password

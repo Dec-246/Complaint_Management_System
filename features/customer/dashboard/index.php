@@ -1,6 +1,6 @@
 <?php
-require '../core/database/db.connect.php';
-require '../core/auth/customer/authenticationRestriction.php';
+require '../../../core/database/db.connect.php';
+require '../../../core/auth/customer/authenticationRestriction.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,17 +8,17 @@ require '../core/auth/customer/authenticationRestriction.php';
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet"  href="assets/css/global.css" type="text/css"> 
+<link rel="stylesheet"  href="../../../public/assets/css/global.css" type="text/css"> 
 
 
 <title>Home Screen</title>
 </head>
 
 <body>
-    <?php include '../core/layout/customer/Customer_nav.php';?>
+    <?php include '../../../core/layout/customer/navbar.php';?>
 <style>
     body{
-        background-image:url("assets/IMG/backgroundImage.png");
+        background-image:url("../../../public/assets/IMG/backgroundImage.png");
     }
 </style>
 
@@ -33,12 +33,12 @@ require '../core/auth/customer/authenticationRestriction.php';
 
     <div class="supportPersonsInfo" style="flex-grow: 1;">
         <!-- controls the button -->
-        <br><a href="../features/customer/complaints/log_complaint.php" class="supportPersonsInfo">Log Complaint</a><br>
+        <br><a href="../complaints/log_complaint.php" class="supportPersonsInfo">Log Complaint</a><br>
     </div>
 
     <div class="supportPersonsInfo" style="flex-grow: 1;">
         <!-- controls the button -->
-        <br><a href="../features/customer/complaints/complaintHistory.php" class="supportPersonsInfo">View complaint History</a><br>
+        <br><a href="../complaints/complaintHistory.php" class="supportPersonsInfo">View complaint History</a><br>
     </div>
 </div><br><br><br><br>
 
@@ -46,7 +46,7 @@ require '../core/auth/customer/authenticationRestriction.php';
 
 <script>
 function myFunction() {
-  location.replace("../features/customer/chatbot/chatbot.php")
+  location.replace("../chatbot/chatbot.php")
 }
 </script>
 
