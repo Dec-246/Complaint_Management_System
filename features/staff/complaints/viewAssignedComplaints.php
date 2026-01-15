@@ -132,7 +132,7 @@ if ($activation_code !== 'activated') {
                     <input type="hidden" name="complaint_id" value="<?= $c['complaint_id'] ?>">
                     <label>Change Status:</label>
                     <div class="form-group">
-                        <select class="tenantStyle" name="status_id" style="text-align: center; margin: auto; width:100%;">
+                        <select aria-label="Please select the activity status of this complaint." class="tenantStyle" name="status_id" style="text-align: center; margin: auto; width:100%;">
                             <?php require 'statusTypeInfo.php'; ?>
                         </select><br>
                     </div><br>

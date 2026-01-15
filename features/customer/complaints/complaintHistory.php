@@ -8,11 +8,7 @@ require 'complaintHistoryProcess.php';
 require '../profile/profileProcess.php';
 
 // If user not logged in, redirect to login page
-if (!isset($_SESSION['account_loggedIn'])) {
-    header('Location: ../authentication/login.php');
-    //echo 'user not logged in, redirecting to login page';
-    exit;
-}
+require '../../../core/auth/customer/authoriseUser.php';
 
 $username = $_SESSION['username'];
 
@@ -128,7 +124,7 @@ if ($activation_code !== 'activated') {
                     <label>Change Solve Status:</label>
 
                     <div class="form-group">
-                        <select class="tenantStyle" name="is_solved_id" style="text-align: center; margin: auto; width:100%;">
+                        <select aria-label="Please select yes or no if the complaint has been solved." class="tenantStyle" name="is_solved_id" style="text-align: center; margin: auto; width:100%;">
 
                             <?php $c_current = $c;
                             require 'solvedInfo.php';
@@ -137,7 +133,7 @@ if ($activation_code !== 'activated') {
                         </select><br>
                     </div><br>
 
-                    <button class="btn blue" type="submit">Update Solve Status</button>
+                    <button class="btn" type="submit">Update Solve Status</button>
                 </form><br>
 
                 <p>-------------------------------------------------------------------------------------------------------------</p>

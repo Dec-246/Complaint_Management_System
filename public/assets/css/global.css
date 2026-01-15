@@ -177,7 +177,7 @@ h6 {
   appearance: none;
   cursor: pointer;
   border: 0;
-  background-color: #3e7bd6;
+  background-color: green;
   color: #FFFFFF;
   padding: 0 14px;
   font-size: 14px;
@@ -188,7 +188,7 @@ h6 {
 }
 
 .btn:hover {
-  background-color: green;
+  background-color: rgb(131, 59, 219);
 }
 
 .login h1,
@@ -518,12 +518,14 @@ h6 {
 
 /* Controlls background image once user logged in */
 .body {
-  background-image: url("IMG/backgroundImage.png");
+  background-image: url("../IMG/backgroundImage.png");
   opacity: 0.5;
   font-family: Arial;
   /* margin: horizontal centering */
   margin: 0;
+
 }
+
 
 /* example box- changing colour based on screen size */
 .example {
