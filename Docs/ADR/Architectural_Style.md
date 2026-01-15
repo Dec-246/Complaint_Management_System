@@ -51,4 +51,5 @@ Reference:
 
 ‌[2] Harris, C. (2024). Microservices vs. monolithic architecture. Atlassian. https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith
 
-‌
+‌Architecture styles:
+https://www.linkedin.com/learning-login/share?account=69719634&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fsoftware-architecture-patterns-for-developers-25635719%2Fmonolith%3Ftrk%3Dshare_video_url%26shareId%3DVsJkLZHrQSeiKXy7nJ%252BvJA%253D%253D
