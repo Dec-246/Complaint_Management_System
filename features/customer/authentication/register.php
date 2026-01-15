@@ -1,7 +1,7 @@
 <?php 
 ini_set('display_errors', 0);
 require '../../../core/database/db.connect.php';
-require 'registerProcess.php';
+
 
 //redirect user to home page if user logged in
 if (isset($_SESSION['account_loggedIn'])) {

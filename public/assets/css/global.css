@@ -32,12 +32,13 @@
   align-items: center;
   border: 2px solid black;
   border-radius: 25px;
-  margin-top: 50px;
+  margin-top: 10px;
   width: 400px;
   max-width: 95%;
   background-color: #dee1e6;
+  color: red;
   box-shadow: 0px 0px 20px 20px rgba(45, 57, 68, 0.05);
-  margin: 100px auto;
+  margin: 10px auto;
   padding: 35px;
 }
 

@@ -1,4 +1,4 @@
-# {short title, representative of solved problem and found solution}
+# {Choice of Architectural Style}
 
 ## Context and Problem Statement
 
@@ -28,7 +28,7 @@ Before beginning the planning process for my proof-of-concept, I need to choose 
 
 ## Decision Outcome
 
-Chosen option: "Monolith", This is due to how easy and versatile the architectural style is to use and adapt to. When making this decision it was important that I chose an architectural style that I would be able to learn and understand as quickly as possible and also avoid creating a complex situation for my system that I was yet to develop. The outcome of this was that the project went seamlessly; allowing me to easily complete appropriate designs and follow up with a proof-of-concept system which aligned with the Monolith architectural style.
+Chosen option: "Monolith", This is due to how easy and versatile the architectural style is to use and adapt to. When making this decision it was important that I chose an architectural style that I would be able to learn and understand as quickly as possible and also avoid creating a complex situation for my system that I was yet to develop. The outcome of this was that the project went well; allowing me to easily complete appropriate designs and follow up with a proof-of-concept system which aligned with the Monolith architectural style.
 
 ### Consequences
 

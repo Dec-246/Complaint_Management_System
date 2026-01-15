@@ -3,6 +3,7 @@ require '../../../core/database/db.connect.php';
 
 // check if the form has been submitted
 if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
+    header("Location: register.php");
     exit('Please complete the registration form!');
 }
 
