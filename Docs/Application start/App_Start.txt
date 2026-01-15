@@ -8,7 +8,7 @@ Mail system
 - paste http://localhost:8025/# in URL
 
 Website
-- http://localhost/ComplaintManagementSystem/login.php
+- http://localhost/ComplaintManagementSystem/features/customer/authentication/login.php
 
 
 Code
