@@ -40,7 +40,7 @@ require '../../../core/auth/customer/authenticationRestriction.php';
         <!-- controls the button -->
         <br><a href="../complaints/complaintHistory.php" class="supportPersonsInfo">View complaint History</a><br>
     </div>
-</div><br><br><br><br>
+</div><br><br><br><br><br><br>
 
 <button onclick="myFunction()" id="chatbot">Chatbot</button>
 
