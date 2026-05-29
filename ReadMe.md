@@ -18,3 +18,35 @@
 ## Code
 
 - GITHUB: https://github.com/Dec-246/Complaint_Management_System 
+
+## Preview
+
+### Staff
+Dashboard
+<img width="1360" height="1252" alt="staff dashboard" src="https://github.com/user-attachments/assets/5fa97ff9-d230-4d21-add6-e85cc9b71b7c" />
+
+Profile
+<img width="1356" height="1054" alt="staff profile" src="https://github.com/user-attachments/assets/d5553ea5-2458-4a54-89c5-4c242424caac" />
+
+Assigned complaints
+<img width="1322" height="1452" alt="staff assigned_complaints" src="https://github.com/user-attachments/assets/6652052f-812c-4819-aa56-4ec6e3ae8428" />
+
+### Customer
+Dashboard
+<img width="1316" height="1456" alt="customer dashboard" src="https://github.com/user-attachments/assets/0e675f7a-c1f8-4298-9292-f70a2b26c57d" />
+
+Profile
+<img width="1352" height="1206" alt="customer profile" src="https://github.com/user-attachments/assets/b842b2ab-67cc-47dc-91c7-baa441a4ec2d" />
+
+Log complaint
+<img width="1350" height="1438" alt="customer log_complaint" src="https://github.com/user-attachments/assets/7608c84c-763d-4012-9df3-307f719b6242" />
+
+Log complaint type options
+<img width="1348" height="1444" alt="customer log_complaint options" src="https://github.com/user-attachments/assets/b61c6a83-a2cf-4d49-9039-fdf39b7ef754" />
+
+Complaint history<img width="1328" height="1442" alt="customer past_complaints" src="https://github.com/user-attachments/assets/d6dbf051-fd1f-44e4-a71d-c207fbff4de0" />
+
+Future chatbot screen
+<img width="1356" height="1348" alt="customer chatbot_screen" src="https://github.com/user-attachments/assets/767b8684-57fd-414e-a654-583fe61a9226" />
+
+
