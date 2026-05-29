@@ -32,6 +32,13 @@ Assigned complaints
 <img width="1322" height="1452" alt="staff assigned_complaints" src="https://github.com/user-attachments/assets/6652052f-812c-4819-aa56-4ec6e3ae8428" />
 
 ### Customer
+
+Register as customer
+<img width="648" height="912" alt="customer register_screen" src="https://github.com/user-attachments/assets/654bfb0a-0d38-4128-8eda-5e2215cf0232" />
+
+Customer register- selecting tenant options
+<img width="636" height="1150" alt="customer register_screen_tenant_options" src="https://github.com/user-attachments/assets/88c0368e-a8a1-443b-a285-918417bd89c5" />
+
 Dashboard
 <img width="1316" height="1456" alt="customer dashboard" src="https://github.com/user-attachments/assets/0e675f7a-c1f8-4298-9292-f70a2b26c57d" />
 
