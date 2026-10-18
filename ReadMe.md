@@ -1,23 +1,27 @@
 # Complaint Management System Application start
 
-## Xampp
+This Project involved creating a system that managed complaints on behalf of different Mobile/ Banking companies. I created different logins for both staff and customer user roles as well as purposely not adding a signup for staff accounts. The customers however could choose their company during their signup process and their account will then be connected to that tenant in the system. Once customers make a complaint, the system automatically assigned this complaint to a staff member that worked on behalf of that tenant and under the same department as the complaint. 
+
+## Learning Outcomes:
+
+- Learnt intricacies of assigning tasks to certain users (staff) based on conditions such as their company and department. 
+
+## Setup
+
+### Xampp
 
 - xampp-control.exe
 - start Apache & MySQL
 
-## Mail system
+### Mail system
 
 - [need to change ' smtp_port=25 ' to 1025 (from 25) in xampp/php/php.ini]
 - open "C:\MailHog\MailHog.exe"
 - paste http://localhost:8025/# in URL
 
-## Website
+### Website
 
 - http://localhost/ComplaintManagementSystem/login.php
-
-## Code
-
-- GITHUB: https://github.com/Dec-246/Complaint_Management_System 
 
 ## Preview
 
