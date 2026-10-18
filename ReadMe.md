@@ -1,5 +1,7 @@
 # Complaint Management System Application start
 
+* NONE OF THE COMPANIES REFERENCED IN THIS PROJECT WERE IN ANY WAY CONNECTED TO THIS PROJECT *
+
 This Project involved creating a system that managed complaints on behalf of different Mobile/ Banking companies. I created different logins for both staff and customer user roles as well as purposely not adding a signup for staff accounts. The customers however could choose their company during their signup process and their account will then be connected to that tenant in the system. Once customers make a complaint, the system automatically assigned this complaint to a staff member that worked on behalf of that tenant and under the same department as the complaint. 
 
 ## Learning Outcomes:
