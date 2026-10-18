@@ -5,7 +5,7 @@ This Project involved creating a system that managed complaints on behalf of dif
 ## Learning Outcomes:
 
 - Learnt intricacies of assigning tasks to certain users (staff) based on conditions such as their company and department. 
-- Gained experience using local email testing tools 
+- Gained experience using local email testing tools.
 - Integrating activation email to activate the customers account as a form of 2fa.
 
 ## Setup
